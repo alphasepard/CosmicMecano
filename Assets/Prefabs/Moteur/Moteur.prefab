@@ -1,0 +1,1917 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2040151583879926511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2040151583879926509}
+  - component: {fileID: 2040151583879926508}
+  - component: {fileID: 2040151583879926498}
+  m_Layer: 0
+  m_Name: Moteur
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2040151583879926509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040151583879926511}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7175327230466579216}
+  - {fileID: 5454128380091728289}
+  - {fileID: 5454128379574472718}
+  - {fileID: 7175327229959220167}
+  - {fileID: 7565936665291875776}
+  - {fileID: 7175327230002716409}
+  - {fileID: 5454128379675759013}
+  - {fileID: 5454128380725805072}
+  - {fileID: 7175327228712158390}
+  - {fileID: 5454128379469408978}
+  - {fileID: 7175327230159334300}
+  - {fileID: 7565936664909971103}
+  - {fileID: 7565936666828173052}
+  - {fileID: 5454128380716655942}
+  - {fileID: 7175327228858113970}
+  - {fileID: 5454128379578825142}
+  - {fileID: 7175327229347866781}
+  - {fileID: 5454128378832350181}
+  - {fileID: 7565936665217819440}
+  - {fileID: 7175327228473014711}
+  - {fileID: 2040151582387704336}
+  - {fileID: 2040151582459089386}
+  - {fileID: 2040151583217337729}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2040151583879926508
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040151583879926511}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d8b8129aef60a495f947e1fdbe1d0f80, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 16.64, y: 8.88}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &2040151583879926498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040151583879926511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90422cb02349348469e61c622fc46299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: 1
+  nbDirt: 0
+  dirtSprites: []
+--- !u!1001 &2040151582173893130
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 9206467146169235561, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03012 (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
+--- !u!4 &7175327230159334300 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151582173893130}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151582196590447
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 9206467146169235561, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03012 (2)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.535
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
+--- !u!4 &7175327230002716409 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151582196590447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151582218241793
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 6332315970484174516, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03011 (3)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.8000703
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.7387936
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d06ae8d9490d442e4821a38c3a5d1eb1, type: 3}
+--- !u!4 &5454128379578825142 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151582218241793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151582239134289
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 9206467146169235561, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03012 (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.64
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
+--- !u!4 &7175327229959220167 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151582239134289}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151582314508050
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 6332315970484174516, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03011 (2)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.568
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.639
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d06ae8d9490d442e4821a38c3a5d1eb1, type: 3}
+--- !u!4 &5454128379675759013 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151582314508050}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151582378251365
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 6332315970484174516, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03011 (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d06ae8d9490d442e4821a38c3a5d1eb1, type: 3}
+--- !u!4 &5454128379469408978 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151582378251365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151582395163270
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 9206467146169235561, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03012"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
+--- !u!4 &7175327230466579216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151582395163270}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151582415531705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 6332315970484174516, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03011 (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.819
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.824
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d06ae8d9490d442e4821a38c3a5d1eb1, type: 3}
+--- !u!4 &5454128379574472718 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151582415531705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151583015048530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 6332315970484174516, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03011 (4)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.0531135
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4000043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d06ae8d9490d442e4821a38c3a5d1eb1, type: 3}
+--- !u!4 &5454128378832350181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151583015048530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151583110083825
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03013 (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1165a4980dfc24a9cb4f9d9430882c1a, type: 3}
+--- !u!4 &7565936666828173052 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151583110083825}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151583286877169
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 6332315970484174516, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03011 (2)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.122492
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8979893
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d06ae8d9490d442e4821a38c3a5d1eb1, type: 3}
+--- !u!4 &5454128380716655942 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151583286877169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151583346435218
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03013"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.412301
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7959576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1165a4980dfc24a9cb4f9d9430882c1a, type: 3}
+--- !u!4 &7565936664909971103 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151583346435218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151583369739943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 6332315970484174516, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03011"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.661
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.737
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d06ae8d9490d442e4821a38c3a5d1eb1, type: 3}
+--- !u!4 &5454128380725805072 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151583369739943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151583522492683
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 9206467146169235561, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03012 (3)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13877702
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.040816557
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
+--- !u!4 &7175327229347866781 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151583522492683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151583585222605
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03013"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.482376
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.482376
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.482376
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1165a4980dfc24a9cb4f9d9430882c1a, type: 3}
+--- !u!4 &7565936665291875776 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151583585222605}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151583646693693
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03013 (2)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1165a4980dfc24a9cb4f9d9430882c1a, type: 3}
+--- !u!4 &7565936665217819440 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151583646693693}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151583725633569
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 9206467146169235561, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03012 (4)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
+--- !u!4 &7175327228473014711 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151583725633569}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151584004079382
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 6332315970484174516, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03011"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4515953
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6963892
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d06ae8d9490d442e4821a38c3a5d1eb1, type: 3}
+--- !u!4 &5454128380091728289 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151584004079382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151584012117540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 9206467146169235561, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03012 (2)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.8041002
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
+--- !u!4 &7175327228858113970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151584012117540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2040151584149290272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 9206467146169235561, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03012"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
+--- !u!4 &7175327228712158390 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040151584149290272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5454128379543841959
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 6332315970484174516, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03011"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d06ae8d9490d442e4821a38c3a5d1eb1, type: 3}
+--- !u!4 &2040151582387704336 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5454128379543841959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7175327230276692092
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 9206467146169235561, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03012"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
+--- !u!4 &2040151582459089386 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+    type: 3}
+  m_PrefabInstance: {fileID: 7175327230276692092}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7565936664787394444
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_Name
+      value: "Sprite_grille-moteur_salete\u03013"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1165a4980dfc24a9cb4f9d9430882c1a, type: 3}
+--- !u!4 &2040151583217337729 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8408088845372840461, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7565936664787394444}
+  m_PrefabAsset: {fileID: 0}

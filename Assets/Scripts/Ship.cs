@@ -7,22 +7,16 @@ public class Ship : MonoBehaviour
     // render
     public AnimationCurve shipOscilation;
     public float timeElapsed;
-    public bool reparing;
-    public GameObject engineSpriteOn;
-    public GameObject shieldSpriteOn;
-
-    // Game object
-    public GameObject enginePrefab;
-    public GameObject shieldPrefab;
-    public GameObject reparingSystem;
+    public GameObject engineSpriteOn, shieldSpriteOn;
     public MiniGame MiniGameUI;
 
+    // Game object
+    public GameObject enginePrefab, shieldPrefab, reparingSystem;
+
     // logic
-    public bool faultyEngine;
-    public bool faultyShield;
+    public bool faultyEngine, faultyShield, reparing;
     public int shipLife = 8;
-    public float nextEngineFailure;
-    public float nextShieldFailure;
+    public float nextEngineFailure, nextShieldFailure;
 
     void Start()
     {
@@ -52,7 +46,6 @@ public class Ship : MonoBehaviour
             reparing = true;
 
             MiniGameUI.ShowControlsBouclier();
-
             reparingSystem = Instantiate(shieldPrefab);
             reparingSystem.GetComponent<Bouclier>().ship = this;
         }
@@ -65,7 +58,6 @@ public class Ship : MonoBehaviour
             reparing = true;
 
             MiniGameUI.ShowControlsMoteur();
-
             reparingSystem = Instantiate(enginePrefab);
             reparingSystem.GetComponent<Moteur>().ship = this;
         } 
@@ -76,6 +68,7 @@ public class Ship : MonoBehaviour
             transform.position = new Vector2(-28,0);
             transform.localScale = new Vector2(5, 5);
             reparing = false;
+            MiniGameUI.HideControls();
         }
 
         // applying ship shaking
@@ -83,7 +76,7 @@ public class Ship : MonoBehaviour
         transform.position = new Vector2(transform.position.x, transform.position.y+shipOscilation.Evaluate(timeElapsed*15));
     }
 
-    public void checkFailure()
+    private void checkFailure()
     {
         // check for engine failure timer
         if (timeElapsed > nextEngineFailure)
@@ -102,7 +95,7 @@ public class Ship : MonoBehaviour
         }
     }
 
-    public float nextFailure()
+    private float nextFailure()
     {
         Random.seed = System.DateTime.Now.Millisecond;
         return timeElapsed + 5 + (Random.value * 4);
@@ -111,14 +104,12 @@ public class Ship : MonoBehaviour
     public void repairEngine()
     {
         faultyEngine = false;
-        MiniGameUI.HideControls();
         engineSpriteOn.SetActive(true);
         nextEngineFailure = nextFailure();
     }
     public void repairShield()
     {
         faultyShield = false;
-        MiniGameUI.HideControls();
         shieldSpriteOn.SetActive(true);
         nextShieldFailure = nextFailure();
     }

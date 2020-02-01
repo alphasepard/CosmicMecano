@@ -27,7 +27,7 @@ public class Bouclier : Game
         KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6,
         KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9
     };
-    static string[] pileNames = new string[] {"large", "medium", "small" };
+    static string[] pileNames = new string[] { "small", "medium", "large" };
     static string[] blocNames = new string[] { "left", "right" };
 
     // Start is called before the first frame update

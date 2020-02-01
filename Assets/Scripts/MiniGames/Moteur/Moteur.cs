@@ -6,7 +6,6 @@ public class Moteur : MonoBehaviour
 {
     public bool left = true;
     public int nbDirt;
-    public GameObject[] dirtSprites;
     GameObject brosse;
 
     private void Start()
@@ -32,15 +31,21 @@ public class Moteur : MonoBehaviour
 
     void Update()
     {
-        if (nbDirt == 0 && Input.GetKeyDown(KeyCode.Return))
+        if (nbDirt == 0)
         {
-            Destroy(gameObject);
+            if (Input.GetKeyDown(KeyCode.Return)) End();
         }
         else if (Input.GetKeyDown(left ? KeyCode.RightArrow : KeyCode.LeftArrow))
         {
             left = !left;
             DeleteOneDirt();
             brosse.transform.position = new Vector3(-1 * brosse.transform.position.x, brosse.transform.position.y, brosse.transform.position.z);
+            if (nbDirt == 0) Destroy(brosse);
         }
+    }
+
+    void End()
+    {
+        Destroy(gameObject);
     }
 }

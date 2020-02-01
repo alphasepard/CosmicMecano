@@ -19,7 +19,7 @@ public class Ship : MonoBehaviour
     // logic
     public bool faultyEngine, faultyShield, reparing;
     public int shipLife = 8;
-    public float nextEngineFailure, nextShieldFailure;
+    public float nextEngineFailure, nextShieldFailure, breakShieldTimer, breakEngineTimer;
 
     void Start()
     {
@@ -42,6 +42,7 @@ public class Ship : MonoBehaviour
     void Update()
     {
         checkFailure();
+        checkDamage();
 
         // starting shield repair
         if (Input.GetKeyDown("s") && !reparing && faultyShield)
@@ -86,6 +87,7 @@ public class Ship : MonoBehaviour
         // check for engine failure timer
         if (timeElapsed > nextEngineFailure)
         {
+            breakEngineTimer = 0;
             faultyEngine = true;
             engineSpriteOn.SetActive(false);
             nextEngineFailure = int.MaxValue;
@@ -94,9 +96,32 @@ public class Ship : MonoBehaviour
         // check for shield failure timer
         if (nextShieldFailure < timeElapsed)
         {
+            breakShieldTimer = 0;
             faultyShield = true;
             shieldSpriteOn.SetActive(false);
             nextShieldFailure = int.MaxValue;
+        }
+    }
+
+    private void checkDamage()
+    {
+        if (faultyEngine)
+        {
+            if (breakShieldTimer > 5)
+            {
+                breakShieldTimer = 0;
+                damageShip();
+            }
+            else breakShieldTimer += Time.deltaTime;
+        }
+        if (faultyShield)
+        {
+            if (breakEngineTimer > 5)
+            {
+                breakEngineTimer = 0;
+                damageShip();
+            }
+            else breakEngineTimer += Time.deltaTime;
         }
     }
 
@@ -108,12 +133,14 @@ public class Ship : MonoBehaviour
     public void repairEngine()
     {
         faultyEngine = false;
+        breakEngineTimer = 0;
         engineSpriteOn.SetActive(true);
         nextEngineFailure = nextFailure();
     }
     public void repairShield()
     {
         faultyShield = false;
+        breakShieldTimer = 0;
         shieldSpriteOn.SetActive(true);
         nextShieldFailure = nextFailure();
     }

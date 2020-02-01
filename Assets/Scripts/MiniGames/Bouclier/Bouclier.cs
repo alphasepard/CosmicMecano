@@ -56,7 +56,8 @@ public class Bouclier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(keyCodes[state])) Next();
+        if (Input.GetKeyDown(KeyCode.Return)) End();
+        else if (Input.GetKeyDown(keyCodes[state])) Next();
     }
 
     void Next()
@@ -80,9 +81,14 @@ public class Bouclier : MonoBehaviour
                 state = State.CapotClosed;
                 break;
             case State.CapotClosed:
-                ship.repairShield();
-                Destroy(gameObject);
+                End();
                 break;
         }
+    }
+
+    void End()
+    {
+        if(state == State.CapotClosed) ship.repairShield();
+        Destroy(gameObject);
     }
 }

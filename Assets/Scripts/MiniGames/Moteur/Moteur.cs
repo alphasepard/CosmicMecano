@@ -35,10 +35,8 @@ public class Moteur : MonoBehaviour
 
     void Update()
     {
-        if (nbDirt == 0)
-        {
-            if (Input.GetKeyDown(KeyCode.Return)) End();
-        }
+        if (Input.GetKeyDown(KeyCode.Return)) End();
+        else if (nbDirt == 0) return;
         else if (Input.GetKeyDown(left ? KeyCode.RightArrow : KeyCode.LeftArrow))
         {
             left = !left;
@@ -51,7 +49,7 @@ public class Moteur : MonoBehaviour
 
     void End()
     {
-        ship.repairEngine();
+        if(nbDirt == 0) ship.repairEngine();
         Destroy(gameObject);
     }
 }

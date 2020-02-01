@@ -9,6 +9,7 @@ public class Ship : MonoBehaviour
     public float timeElapsed;
     public GameObject engineSpriteOn, shieldSpriteOn;
     public MiniGame MiniGameUI;
+    public LifeBar lifeRenderer;
     public Vector2 smallShip = new Vector2(2.5f, 2.5f);
     public Vector2 bigShip = new Vector2(5, 5);
 
@@ -34,6 +35,8 @@ public class Ship : MonoBehaviour
         reparing = false;
         repairEngine();
         repairShield();
+        lifeRenderer.maxLifePoints = shipLife;
+        lifeRenderer.Init();
     }
    
     void Update()
@@ -113,5 +116,10 @@ public class Ship : MonoBehaviour
         faultyShield = false;
         shieldSpriteOn.SetActive(true);
         nextShieldFailure = nextFailure();
+    }
+
+    public void damageShip()
+    {
+        lifeRenderer.RemoveLifePoint();
     }
 }

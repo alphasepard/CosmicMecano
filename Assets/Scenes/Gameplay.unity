@@ -285,6 +285,90 @@ Transform:
   m_Father: {fileID: 1937133875}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &707562207
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547799, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: m_Name
+      value: LifeBar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 624d7380e302348cfbdd0a50941740a5, type: 3}
 --- !u!1001 &763510057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -391,6 +475,18 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02c7d9b5edf6c485f8a390bf67de33df, type: 3}
+--- !u!114 &919226664 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4587486723876547792, guid: 624d7380e302348cfbdd0a50941740a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 707562207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329a1d81a0b1f465183720016e825abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1057833021 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8446779378495523453, guid: 3c64310d419a24313805c0e53f7bc8a9,
@@ -1047,6 +1143,7 @@ MonoBehaviour:
   engineSpriteOn: {fileID: 1312776165}
   shieldSpriteOn: {fileID: 326701949}
   MiniGameUI: {fileID: 1057833021}
+  lifeRenderer: {fileID: 919226664}
   smallShip: {x: 2.5, y: 2.5}
   bigShip: {x: 5, y: 5}
   enginePrefab: {fileID: 2040151583879926511, guid: 0015f4189e0fe461188b67faa7ddcad1,

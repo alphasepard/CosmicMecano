@@ -91,7 +91,9 @@ public class Bouclier : Game
 
     void End()
     {
-        if(state == State.CapotClosed) ship.repairShield();
+        if (state == State.CapotClosed) ship.repairShield();
+        else ship.damageShip();
+
         Destroy(gameObject);
     }
 }

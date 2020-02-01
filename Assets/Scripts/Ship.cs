@@ -11,16 +11,13 @@ public class Ship : MonoBehaviour
 
     // Game object
     public GameObject enginePrefab;
-    public GameObject engine;
     public GameObject shieldPrefab;
-    public GameObject shield;
+    public GameObject reparingSystem;
 
     // logic
     public bool faultyEngine;
     public bool faultyShield;
     public int shipLife = 8;
-    public event EventHandler OnEngineFixed;
-    public event EventHandler OnshieldFixed;
 
     void Start()
     {
@@ -34,7 +31,7 @@ public class Ship : MonoBehaviour
 
         // setting up logic
         reparing = false;
-        faultyBatterie = false;
+        faultyEngine = false;
         faultyShield = false;
     }
    
@@ -46,8 +43,8 @@ public class Ship : MonoBehaviour
             transform.position = new Vector2(-50,0);
             transform.localScale = new Vector2(3, 3);
             reparing = true;
-
-            shield = Instantiate(shieldPrefab, new Vector3(-10, 0, 0), new Quaternion());
+            
+            reparingSystem = Instantiate(shieldPrefab, new Vector3(-10, 0, 0), new Quaternion());
         }
 
         // starting engine repair
@@ -57,7 +54,7 @@ public class Ship : MonoBehaviour
             transform.localScale = new Vector2(3, 3);
             reparing = true;
 
-            engine = Instantiate(enginePrefab, new Vector3(-10, 0, 0), new Quaternion());
+            reparingSystem = Instantiate(enginePrefab, new Vector3(-10, 0, 0), new Quaternion());
         } 
 
         // leaving repair menu
@@ -67,8 +64,7 @@ public class Ship : MonoBehaviour
             transform.localScale = new Vector2(5, 5);
             reparing = false;
 
-            DestroyImmediate(shield);
-            DestroyImmediate(engine);
+            DestroyImmediate(reparingSystem);
         }
 
         // applying ship shaking

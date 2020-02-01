@@ -471,12 +471,13 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeElapsed: 0
   reparing: 0
-  moteurPrefab: {fileID: 2040151583879926511, guid: 0015f4189e0fe461188b67faa7ddcad1,
+  enginePrefab: {fileID: 2040151583879926511, guid: 0015f4189e0fe461188b67faa7ddcad1,
     type: 3}
-  moteur: {fileID: 0}
-  bouclierPrefab: {fileID: 3557695318736034196, guid: 6d0f5bbdfc477493d81a3615f82d7a8f,
+  shieldPrefab: {fileID: 3557695318736034196, guid: 6d0f5bbdfc477493d81a3615f82d7a8f,
     type: 3}
-  bouclier: {fileID: 0}
+  reparingSystem: {fileID: 0}
+  faultyEngine: 0
+  faultyShield: 0
   shipLife: 8
 --- !u!212 &1937133874
 SpriteRenderer:

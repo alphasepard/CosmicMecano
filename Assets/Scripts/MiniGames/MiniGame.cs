@@ -10,11 +10,11 @@ public class MiniGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        consign.GetComponent<Text>();
+        consignText = consign.GetComponent<Text>();
     }
 
     public void SetConsign(string text)
     {
-        consignText.text = text;
+        if(consignText) consignText.text = text;
     }
 }

@@ -42,7 +42,9 @@ public class Moteur : MonoBehaviour
         {
             left = !left;
             DeleteOneDirt();
-            brosse.transform.position = new Vector3(-1 * brosse.transform.position.x, brosse.transform.position.y, brosse.transform.position.z);
+            var position = brosse.transform.localPosition;
+            brosse.transform.localPosition = new Vector3(-1 * position.x, position.y, position.z);
+            Debug.Log(brosse.transform.position);
             if (nbDirt == 0) Destroy(brosse);
         }
     }

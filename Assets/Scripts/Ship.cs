@@ -9,6 +9,8 @@ public class Ship : MonoBehaviour
     public float timeElapsed;
     public GameObject engineSpriteOn, shieldSpriteOn;
     public MiniGame MiniGameUI;
+    public Vector2 smallShip = new Vector2(2.5f, 2.5f);
+    public Vector2 bigShip = new Vector2(5, 5);
 
     // Game object
     public GameObject enginePrefab, shieldPrefab, reparingSystem;
@@ -42,7 +44,7 @@ public class Ship : MonoBehaviour
         if (Input.GetKeyDown("s") && !reparing && faultyShield)
         {
             transform.position = new Vector2(-50,0);
-            transform.localScale = new Vector2(3, 3);
+            transform.localScale = smallShip;
             reparing = true;
 
             MiniGameUI.ShowControlsBouclier();
@@ -54,7 +56,7 @@ public class Ship : MonoBehaviour
         else if (Input.GetKeyDown("e") && !reparing && faultyEngine)
         {
             transform.position = new Vector2(-50,0);
-            transform.localScale = new Vector2(3, 3);
+            transform.localScale = smallShip;
             reparing = true;
 
             MiniGameUI.ShowControlsMoteur();
@@ -66,7 +68,7 @@ public class Ship : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Return) && reparing)
         {   
             transform.position = new Vector2(-28,0);
-            transform.localScale = new Vector2(5, 5);
+            transform.localScale = bigShip;
             reparing = false;
             MiniGameUI.HideControls();
         }
@@ -97,7 +99,6 @@ public class Ship : MonoBehaviour
 
     private float nextFailure()
     {
-        Random.seed = System.DateTime.Now.Millisecond;
         return timeElapsed + 5 + (Random.value * 4);
     }
 

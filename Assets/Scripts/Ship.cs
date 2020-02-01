@@ -18,6 +18,8 @@ public class Ship : MonoBehaviour
     public bool faultyEngine;
     public bool faultyShield;
     public int shipLife = 8;
+    public float nextEngineFailure;
+    public float nextShieldFailure;
 
     void Start()
     {
@@ -31,14 +33,16 @@ public class Ship : MonoBehaviour
 
         // setting up logic
         reparing = false;
-        faultyEngine = false;
-        faultyShield = false;
+        repairEngine();
+        repairShield();
     }
    
     void Update()
     {
+        checkFailure();
+
         // starting shield repair
-        if (Input.GetKeyDown("s") && !reparing)
+        if (Input.GetKeyDown("s") && !reparing && faultyShield)
         {
             transform.position = new Vector2(-50,0);
             transform.localScale = new Vector2(3, 3);
@@ -49,7 +53,7 @@ public class Ship : MonoBehaviour
         }
 
         // starting engine repair
-        else if (Input.GetKeyDown("e") && !reparing)
+        else if (Input.GetKeyDown("e") && !reparing && faultyEngine)
         {
             transform.position = new Vector2(-50,0);
             transform.localScale = new Vector2(3, 3);
@@ -68,16 +72,44 @@ public class Ship : MonoBehaviour
         }
 
         // applying ship shaking
-        timeElapsed += Time.deltaTime * 15;
-        transform.position = new Vector2(transform.position.x, transform.position.y+shipOscilation.Evaluate(timeElapsed));
+        timeElapsed += Time.deltaTime;
+        transform.position = new Vector2(transform.position.x, transform.position.y+shipOscilation.Evaluate(timeElapsed*15));
+
+        Debug.Log("Time elapsed" + timeElapsed);
+        Debug.Log("next engine : "+ nextEngineFailure+", next shield : "+ nextShieldFailure);
+    }
+
+    public void checkFailure()
+    {
+        // check for engine failure timer
+        if (timeElapsed > nextEngineFailure)
+        {
+            faultyEngine = true;
+            nextEngineFailure = int.MaxValue;
+        }
+
+        // check for shield failure timer
+        if (nextShieldFailure < timeElapsed)
+        {
+            faultyShield = true;
+            nextShieldFailure = int.MaxValue;
+        }
+    }
+
+    public float nextFailure()
+    {
+        Random.seed = System.DateTime.Now.Millisecond;
+        return timeElapsed + 5 + (Random.value * 4);
     }
 
     public void repairEngine()
     {
         faultyEngine = false;
+        nextEngineFailure = nextFailure();
     }
     public void repairShield()
     {
         faultyShield = false;
+        nextShieldFailure = nextFailure();
     }
 }

@@ -37,7 +37,6 @@ public class Ship : MonoBehaviour
    
     void Update()
     {
-        Debug.Log(reparing);
         // starting shield repair
         if (Input.GetKeyDown("s") && !reparing)
         {
@@ -76,11 +75,9 @@ public class Ship : MonoBehaviour
     public void repairEngine()
     {
         faultyEngine = false;
-        Debug.Log("Engine repaired");
     }
     public void repairShield()
     {
         faultyShield = false;
-        Debug.Log("Shield repaired");
     }
 }

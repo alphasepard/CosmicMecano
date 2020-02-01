@@ -15,6 +15,7 @@ public class Ship : MonoBehaviour
     public GameObject enginePrefab;
     public GameObject shieldPrefab;
     public GameObject reparingSystem;
+    public MiniGame MiniGameUI;
 
     // logic
     public bool faultyEngine;
@@ -49,8 +50,10 @@ public class Ship : MonoBehaviour
             transform.position = new Vector2(-50,0);
             transform.localScale = new Vector2(3, 3);
             reparing = true;
-            
-            reparingSystem = Instantiate(shieldPrefab, new Vector3(-10, 0, 0), new Quaternion());
+
+            MiniGameUI.ShowControlsBouclier();
+
+            reparingSystem = Instantiate(shieldPrefab);
             reparingSystem.GetComponent<Bouclier>().ship = this;
         }
 
@@ -61,7 +64,9 @@ public class Ship : MonoBehaviour
             transform.localScale = new Vector2(3, 3);
             reparing = true;
 
-            reparingSystem = Instantiate(enginePrefab, new Vector3(-10, 0, 0), new Quaternion());
+            MiniGameUI.ShowControlsMoteur();
+
+            reparingSystem = Instantiate(enginePrefab);
             reparingSystem.GetComponent<Moteur>().ship = this;
         } 
 
@@ -76,9 +81,6 @@ public class Ship : MonoBehaviour
         // applying ship shaking
         timeElapsed += Time.deltaTime;
         transform.position = new Vector2(transform.position.x, transform.position.y+shipOscilation.Evaluate(timeElapsed*15));
-
-        Debug.Log("Time elapsed" + timeElapsed);
-        Debug.Log("next engine : "+ nextEngineFailure+", next shield : "+ nextShieldFailure);
     }
 
     public void checkFailure()
@@ -109,12 +111,14 @@ public class Ship : MonoBehaviour
     public void repairEngine()
     {
         faultyEngine = false;
+        MiniGameUI.HideControls();
         engineSpriteOn.SetActive(true);
         nextEngineFailure = nextFailure();
     }
     public void repairShield()
     {
         faultyShield = false;
+        MiniGameUI.HideControls();
         shieldSpriteOn.SetActive(true);
         nextShieldFailure = nextFailure();
     }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bouclier : MonoBehaviour
+public class Bouclier : Game
 {
     public enum State
     {
@@ -16,7 +16,6 @@ public class Bouclier : MonoBehaviour
     public KeyCode blocKey, pileKey;
     public int selectedBloc, selectedPile;
     public State state;
-    public Ship ship;
 
     Dictionary<State, KeyCode> keyCodes;
     GameObject capot, pile;
@@ -28,6 +27,8 @@ public class Bouclier : MonoBehaviour
         KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6,
         KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9
     };
+    static string[] pileNames = new string[] {"large", "medium", "small" };
+    static string[] blocNames = new string[] { "left", "right" };
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,8 @@ public class Bouclier : MonoBehaviour
 
         pile = piles[selectedPile].gameObject;
         capot = bloc.GetComponentInChildren<Capot>().gameObject;
+
+        SetConsignes($"Change {pileNames[selectedPile]} battery of {blocNames[selectedBloc]} panel.");
 
         blocKey = blocKeys[selectedBloc];
         pileKey = pileKeys[selectedPile];

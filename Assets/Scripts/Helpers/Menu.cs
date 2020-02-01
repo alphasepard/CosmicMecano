@@ -22,4 +22,9 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("GameOver");
     }
+
+    public void MenuGame()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

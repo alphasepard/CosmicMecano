@@ -16,6 +16,7 @@ public class Bouclier : MonoBehaviour
     public KeyCode blocKey, pileKey;
     public int selectedBloc, selectedPile;
     public State state;
+    public Ship ship;
 
     Dictionary<State, KeyCode> keyCodes;
     GameObject capot, pile;
@@ -79,6 +80,7 @@ public class Bouclier : MonoBehaviour
                 state = State.CapotClosed;
                 break;
             case State.CapotClosed:
+                ship.repairShield();
                 Destroy(gameObject);
                 break;
         }

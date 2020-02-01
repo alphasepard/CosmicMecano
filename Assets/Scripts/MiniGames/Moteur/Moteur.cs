@@ -7,13 +7,14 @@ public class Moteur : MonoBehaviour
     public bool left = true;
     public int nbDirt;
     GameObject brosse;
+    public Ship ship;
     MiniGame miniGame;
 
     private void Start()
     {
         nbDirt = transform.childCount;
         brosse = GetComponentInChildren<Brosse>().gameObject;
-        miniGame = GameObject.Find("MiniGame").GetComponent<MiniGame>();
+        //miniGame = GameObject.Find("MiniGame").GetComponent<MiniGame>();
         //miniGame.SetConsign("Clean up engine aeration");
     }
 
@@ -50,6 +51,7 @@ public class Moteur : MonoBehaviour
 
     void End()
     {
+        ship.repairEngine();
         Destroy(gameObject);
     }
 }

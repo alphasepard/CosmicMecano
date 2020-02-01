@@ -37,6 +37,7 @@ public class Ship : MonoBehaviour
    
     void Update()
     {
+        Debug.Log(reparing);
         // starting shield repair
         if (Input.GetKeyDown("s") && !reparing)
         {
@@ -45,6 +46,7 @@ public class Ship : MonoBehaviour
             reparing = true;
             
             reparingSystem = Instantiate(shieldPrefab, new Vector3(-10, 0, 0), new Quaternion());
+            reparingSystem.GetComponent<Bouclier>().ship = this;
         }
 
         // starting engine repair
@@ -55,6 +57,7 @@ public class Ship : MonoBehaviour
             reparing = true;
 
             reparingSystem = Instantiate(enginePrefab, new Vector3(-10, 0, 0), new Quaternion());
+            reparingSystem.GetComponent<Moteur>().ship = this;
         } 
 
         // leaving repair menu
@@ -63,12 +66,21 @@ public class Ship : MonoBehaviour
             transform.position = new Vector2(-28,0);
             transform.localScale = new Vector2(5, 5);
             reparing = false;
-
-            DestroyImmediate(reparingSystem);
         }
 
         // applying ship shaking
         timeElapsed += Time.deltaTime * 15;
         transform.position = new Vector2(transform.position.x, transform.position.y+shipOscilation.Evaluate(timeElapsed));
+    }
+
+    public void repairEngine()
+    {
+        faultyEngine = false;
+        Debug.Log("Engine repaired");
+    }
+    public void repairShield()
+    {
+        faultyShield = false;
+        Debug.Log("Shield repaired");
     }
 }

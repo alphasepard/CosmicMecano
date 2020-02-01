@@ -47,7 +47,7 @@ public class Moteur : Game
     void End()
     {
         if(nbDirt == 0) ship.repairEngine();
-        else ship.damageShip();
+        else ship.errorDamageShip();
         Destroy(gameObject);
     }
 }

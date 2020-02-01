@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ship : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class Ship : MonoBehaviour
     {
         checkFailure();
         checkDamage();
+        checkLife();
 
         // starting shield repair
         if (Input.GetKeyDown("s") && !reparing && faultyShield)
@@ -107,21 +109,23 @@ public class Ship : MonoBehaviour
 
     private void checkDamage()
     {
-        if (faultyEngine)
+        if (faultyShield)
         {
             if (breakShieldTimer > 5)
             {
                 breakShieldTimer = 0;
-                damageShip();
+                lifeRenderer.RemoveLifePoint();
+                shipLife--;
             }
             else breakShieldTimer += Time.deltaTime;
         }
-        if (faultyShield)
+        if (faultyEngine)
         {
             if (breakEngineTimer > 5)
             {
                 breakEngineTimer = 0;
-                damageShip();
+                lifeRenderer.RemoveLifePoint();
+                shipLife--;
             }
             else breakEngineTimer += Time.deltaTime;
         }
@@ -139,6 +143,7 @@ public class Ship : MonoBehaviour
         engineSpriteOn.SetActive(true);
         engineTooltip.SetActive(false);
         nextEngineFailure = nextFailure();
+        exitMiniGame();
     }
     public void repairShield()
     {
@@ -147,10 +152,26 @@ public class Ship : MonoBehaviour
         shieldSpriteOn.SetActive(true);
         shieldTooltip.SetActive(false);
         nextShieldFailure = nextFailure();
+        exitMiniGame();
     }
 
-    public void damageShip()
+    public void errorDamageShip()
     {
+        exitMiniGame();
         lifeRenderer.RemoveLifePoint();
+        shipLife--;
+    }
+
+    public void exitMiniGame()
+    {
+        transform.position = new Vector2(-28, 0);
+        transform.localScale = bigShip;
+        reparing = false;
+        MiniGameUI.HideControls();
+    }
+
+    public void checkLife()
+    {
+        if (shipLife < 1) SceneManager.LoadScene("GameOver");
     }
 }

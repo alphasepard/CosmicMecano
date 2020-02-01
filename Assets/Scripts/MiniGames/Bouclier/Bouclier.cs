@@ -59,8 +59,8 @@ public class Bouclier : Game
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return)) End();
-        else if (Input.GetKeyDown(keyCodes[state])) Next();
+        if (Input.GetKeyDown(keyCodes[state])) Next();
+        else if (Input.anyKeyDown) End();
     }
 
     void Next()
@@ -92,7 +92,7 @@ public class Bouclier : Game
     void End()
     {
         if (state == State.CapotClosed) ship.repairShield();
-        else ship.damageShip();
+        else ship.errorDamageShip();
 
         Destroy(gameObject);
     }

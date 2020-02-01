@@ -118,7 +118,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   left: 1
   nbDirt: 0
-  dirtSprites: []
 --- !u!1001 &157105487722563646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -864,12 +863,12 @@ PrefabInstance:
     - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.56
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
         type: 3}

@@ -7,11 +7,14 @@ public class Moteur : MonoBehaviour
     public bool left = true;
     public int nbDirt;
     GameObject brosse;
+    MiniGame miniGame;
 
     private void Start()
     {
         nbDirt = transform.childCount;
         brosse = GetComponentInChildren<Brosse>().gameObject;
+        miniGame = GameObject.Find("MiniGame").GetComponent<MiniGame>();
+        miniGame.SetConsign("Clean up engine aeration");
     }
 
     private void DestroyOneDirt()

@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Moteur : MonoBehaviour
+public class Moteur : Game
 {
     public bool left = true;
     public int nbDirt;
     GameObject brosse;
-    public Ship ship;
-    MiniGame miniGame;
 
     private void Start()
     {
         nbDirt = transform.childCount;
         brosse = GetComponentInChildren<Brosse>().gameObject;
-        //miniGame = GameObject.Find("MiniGame").GetComponent<MiniGame>();
-        //miniGame.SetConsign("Clean up engine aeration");
+        SetConsignes("Clean up engine aeration.");
     }
 
     private void DestroyOneDirt()

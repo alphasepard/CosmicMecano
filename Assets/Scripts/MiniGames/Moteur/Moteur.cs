@@ -14,7 +14,7 @@ public class Moteur : MonoBehaviour
         nbDirt = transform.childCount;
         brosse = GetComponentInChildren<Brosse>().gameObject;
         miniGame = GameObject.Find("MiniGame").GetComponent<MiniGame>();
-        miniGame.SetConsign("Clean up engine aeration");
+        //miniGame.SetConsign("Clean up engine aeration");
     }
 
     private void DestroyOneDirt()
@@ -44,7 +44,6 @@ public class Moteur : MonoBehaviour
             DeleteOneDirt();
             var position = brosse.transform.localPosition;
             brosse.transform.localPosition = new Vector3(-1 * position.x, position.y, position.z);
-            Debug.Log(brosse.transform.position);
             if (nbDirt == 0) Destroy(brosse);
         }
     }

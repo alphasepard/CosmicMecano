@@ -7,7 +7,7 @@ public class Ship : MonoBehaviour
     // render
     public AnimationCurve shipOscilation;
     public float timeElapsed;
-    public GameObject engineSpriteOn, shieldSpriteOn;
+    public GameObject engineSpriteOn, shieldSpriteOn, shieldTooltip, engineTooltip;
     public MiniGame MiniGameUI;
     public LifeBar lifeRenderer;
     public Vector2 smallShip = new Vector2(2.5f, 2.5f);
@@ -90,6 +90,7 @@ public class Ship : MonoBehaviour
             breakEngineTimer = 0;
             faultyEngine = true;
             engineSpriteOn.SetActive(false);
+            engineTooltip.SetActive(true);
             nextEngineFailure = int.MaxValue;
         }
 
@@ -99,6 +100,7 @@ public class Ship : MonoBehaviour
             breakShieldTimer = 0;
             faultyShield = true;
             shieldSpriteOn.SetActive(false);
+            shieldTooltip.SetActive(true);
             nextShieldFailure = int.MaxValue;
         }
     }
@@ -135,6 +137,7 @@ public class Ship : MonoBehaviour
         faultyEngine = false;
         breakEngineTimer = 0;
         engineSpriteOn.SetActive(true);
+        engineTooltip.SetActive(false);
         nextEngineFailure = nextFailure();
     }
     public void repairShield()
@@ -142,6 +145,7 @@ public class Ship : MonoBehaviour
         faultyShield = false;
         breakShieldTimer = 0;
         shieldSpriteOn.SetActive(true);
+        shieldTooltip.SetActive(false);
         nextShieldFailure = nextFailure();
     }
 

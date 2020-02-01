@@ -7,6 +7,9 @@ public class Ship : MonoBehaviour
     public AnimationCurve shipOscilation;
     public Vector2 shipScale;
     public float timeElapsed;
+    public bool reparing;
+    public GameObject moteurPrefab;
+    public GameObject bouclierPrefab;
 
     void Start()
     {
@@ -17,20 +20,35 @@ public class Ship : MonoBehaviour
         shipOscilation.postWrapMode = WrapMode.PingPong;
         shipOscilation.preWrapMode = WrapMode.PingPong;
         timeElapsed = 0f;
+        reparing = false;
     }
    
     void Update()
     {
         timeElapsed += Time.deltaTime;
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("s") && !reparing)
         {
             transform.position = new Vector2(-50,0);
-            transform.localScale = new Vector2(1.5f, 1.5f);
-        } 
-        else if (Input.GetKeyDown(KeyCode.Return))
+            transform.localScale = new Vector2(3, 3);
+            reparing = true;
+
+            Instantiate(bouclierPrefab, new Vector3(-10, 0, 0), new Quaternion());
+            bouclierPrefab.transform.localScale = new Vector2(2.22f, 2.22f);
+        }
+        if (Input.GetKeyDown("e") && !reparing)
         {
+            transform.position = new Vector2(-50,0);
+            transform.localScale = new Vector2(3, 3);
+            reparing = true;
+
+            Instantiate(moteurPrefab, new Vector3(-10, 0, 0), new Quaternion());
+            moteurPrefab.transform.localScale = new Vector2(2.22f, 2.22f);
+        } 
+        else if (Input.GetKeyDown(KeyCode.Return) && reparing)
+        {   
             transform.position = new Vector2(-28,0);
-            transform.localScale = new Vector2(3f, 3f);
+            transform.localScale = new Vector2(5, 5);
+            reparing = false;
         }
 
         transform.position = new Vector2(transform.position.x, transform.position.y+shipOscilation.Evaluate(timeElapsed));

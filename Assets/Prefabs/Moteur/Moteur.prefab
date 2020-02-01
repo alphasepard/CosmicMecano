@@ -52,6 +52,7 @@ Transform:
   - {fileID: 2040151582387704336}
   - {fileID: 2040151582459089386}
   - {fileID: 2040151583217337729}
+  - {fileID: 1683603588631168340}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -187,6 +188,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235863, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
 --- !u!4 &7175327230159334300 stripped
@@ -272,6 +278,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235863, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
 --- !u!4 &7175327230002716409 stripped
@@ -291,6 +302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Sprite_grille-moteur_salete\u03011 (3)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174518, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
         type: 3}
@@ -437,6 +453,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.64
       objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235863, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
 --- !u!4 &7175327229959220167 stripped
@@ -456,6 +477,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Sprite_grille-moteur_salete\u03011 (2)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174518, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
         type: 3}
@@ -541,6 +567,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Sprite_grille-moteur_salete\u03011 (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174518, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
         type: 3}
@@ -672,6 +703,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235863, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
 --- !u!4 &7175327230466579216 stripped
@@ -691,6 +727,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Sprite_grille-moteur_salete\u03011 (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174518, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
         type: 3}
@@ -777,6 +818,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Sprite_grille-moteur_salete\u03011 (4)"
       objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174518, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -847,6 +893,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2040151583879926509}
     m_Modifications:
+    - target: {fileID: 8408088845372840458, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
         type: 3}
       propertyPath: m_Name
@@ -927,6 +978,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Sprite_grille-moteur_salete\u03011 (2)"
       objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174518, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -997,6 +1053,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2040151583879926509}
     m_Modifications:
+    - target: {fileID: 8408088845372840458, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
         type: 3}
       propertyPath: m_Name
@@ -1076,6 +1137,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Sprite_grille-moteur_salete\u03011"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174518, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
         type: 3}
@@ -1217,6 +1283,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235863, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
 --- !u!4 &7175327229347866781 stripped
@@ -1232,6 +1303,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2040151583879926509}
     m_Modifications:
+    - target: {fileID: 8408088845372840458, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
         type: 3}
       propertyPath: m_Name
@@ -1322,6 +1398,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2040151583879926509}
     m_Modifications:
+    - target: {fileID: 8408088845372840458, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
         type: 3}
       propertyPath: m_Name
@@ -1457,6 +1538,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235863, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
 --- !u!4 &7175327228473014711 stripped
@@ -1476,6 +1562,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Sprite_grille-moteur_salete\u03011"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174518, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
         type: 3}
@@ -1607,6 +1698,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235863, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
 --- !u!4 &7175327228858113970 stripped
@@ -1682,6 +1778,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235863, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
 --- !u!4 &7175327228712158390 stripped
@@ -1689,6 +1790,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9206467146169235862, guid: 05ca07abcdcda4e4aace1d202ccfb176,
     type: 3}
   m_PrefabInstance: {fileID: 2040151584149290272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2228801543297939293
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2040151583879926509}
+    m_Modifications:
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785820849054854340, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_Name
+      value: sprite_moteur_brosse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298911466318203325, guid: c83cb439cc870493b916f76ed2d43b4c,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c83cb439cc870493b916f76ed2d43b4c, type: 3}
+--- !u!4 &1683603588631168340 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 698928458393367049, guid: c83cb439cc870493b916f76ed2d43b4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2228801543297939293}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5454128379543841959
 PrefabInstance:
@@ -1701,6 +1882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Sprite_grille-moteur_salete\u03011"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6332315970484174518, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6332315970484174519, guid: d06ae8d9490d442e4821a38c3a5d1eb1,
         type: 3}
@@ -1832,6 +2018,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9206467146169235863, guid: 05ca07abcdcda4e4aace1d202ccfb176,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05ca07abcdcda4e4aace1d202ccfb176, type: 3}
 --- !u!4 &2040151582459089386 stripped
@@ -1847,6 +2038,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2040151583879926509}
     m_Modifications:
+    - target: {fileID: 8408088845372840458, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8408088845372840460, guid: 1165a4980dfc24a9cb4f9d9430882c1a,
         type: 3}
       propertyPath: m_Name

@@ -7,17 +7,25 @@ public class Moteur : MonoBehaviour
     public bool left = true;
     public int nbDirt;
     public GameObject[] dirtSprites;
+    GameObject brosse;
 
     private void Start()
     {
         nbDirt = transform.childCount;
+        brosse = GetComponentInChildren<Brosse>().gameObject;
+    }
+
+    private void DestroyOneDirt()
+    {
+        var dirts = GetComponentsInChildren<Dirt>();
+        if (dirts.Length != 0) Destroy(dirts[0].gameObject);
     }
 
     private void DeleteOneDirt()
     {
         if (transform.childCount > 0)
         {
-            Destroy(transform.GetChild(0).gameObject);
+            DestroyOneDirt();
             nbDirt--;
         }
     }
@@ -32,6 +40,7 @@ public class Moteur : MonoBehaviour
         {
             left = !left;
             DeleteOneDirt();
+            brosse.transform.position = new Vector3(-1 * brosse.transform.position.x, brosse.transform.position.y, brosse.transform.position.z);
         }
     }
 }

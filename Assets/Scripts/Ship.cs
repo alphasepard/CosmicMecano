@@ -8,6 +8,8 @@ public class Ship : MonoBehaviour
     public AnimationCurve shipOscilation;
     public float timeElapsed;
     public bool reparing;
+    public GameObject engineSpriteOn;
+    public GameObject shieldSpriteOn;
 
     // Game object
     public GameObject enginePrefab;
@@ -85,6 +87,7 @@ public class Ship : MonoBehaviour
         if (timeElapsed > nextEngineFailure)
         {
             faultyEngine = true;
+            engineSpriteOn.SetActive(false);
             nextEngineFailure = int.MaxValue;
         }
 
@@ -92,6 +95,7 @@ public class Ship : MonoBehaviour
         if (nextShieldFailure < timeElapsed)
         {
             faultyShield = true;
+            shieldSpriteOn.SetActive(false);
             nextShieldFailure = int.MaxValue;
         }
     }
@@ -105,11 +109,13 @@ public class Ship : MonoBehaviour
     public void repairEngine()
     {
         faultyEngine = false;
+        engineSpriteOn.SetActive(true);
         nextEngineFailure = nextFailure();
     }
     public void repairShield()
     {
         faultyShield = false;
+        shieldSpriteOn.SetActive(true);
         nextShieldFailure = nextFailure();
     }
 }

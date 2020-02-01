@@ -33,7 +33,6 @@ public class Ship : MonoBehaviour
             reparing = true;
 
             Instantiate(bouclierPrefab, new Vector3(-10, 0, 0), new Quaternion());
-            bouclierPrefab.transform.localScale = new Vector2(2.22f, 2.22f);
         }
         if (Input.GetKeyDown("e") && !reparing)
         {
@@ -42,7 +41,6 @@ public class Ship : MonoBehaviour
             reparing = true;
 
             Instantiate(moteurPrefab, new Vector3(-10, 0, 0), new Quaternion());
-            moteurPrefab.transform.localScale = new Vector2(2.22f, 2.22f);
         } 
         else if (Input.GetKeyDown(KeyCode.Return) && reparing)
         {   

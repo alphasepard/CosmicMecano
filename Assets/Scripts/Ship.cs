@@ -10,13 +10,14 @@ public class Ship : MonoBehaviour
     public bool reparing;
     public GameObject moteurPrefab;
     public GameObject bouclierPrefab;
+    public GameObject bouclier;
+    public GameObject moteur;
 
     void Start()
     {
         shipOscilation = new AnimationCurve();
-        shipScale = new Vector2(1,1);
-        shipOscilation.AddKey(0, -0.02f);
-        shipOscilation.AddKey(1, 0.02f);
+        shipOscilation.AddKey(0, -0.01f);
+        shipOscilation.AddKey(1, 0.01f);
         shipOscilation.postWrapMode = WrapMode.PingPong;
         shipOscilation.preWrapMode = WrapMode.PingPong;
         timeElapsed = 0f;
@@ -25,14 +26,13 @@ public class Ship : MonoBehaviour
    
     void Update()
     {
-        timeElapsed += Time.deltaTime;
         if (Input.GetKeyDown("s") && !reparing)
         {
             transform.position = new Vector2(-50,0);
             transform.localScale = new Vector2(3, 3);
             reparing = true;
 
-            Instantiate(bouclierPrefab, new Vector3(-10, 0, 0), new Quaternion());
+            bouclier = Instantiate(bouclierPrefab, new Vector3(-10, 0, 0), new Quaternion());
         }
         if (Input.GetKeyDown("e") && !reparing)
         {
@@ -40,15 +40,19 @@ public class Ship : MonoBehaviour
             transform.localScale = new Vector2(3, 3);
             reparing = true;
 
-            Instantiate(moteurPrefab, new Vector3(-10, 0, 0), new Quaternion());
+            moteur = Instantiate(moteurPrefab, new Vector3(-10, 0, 0), new Quaternion());
         } 
         else if (Input.GetKeyDown(KeyCode.Return) && reparing)
         {   
             transform.position = new Vector2(-28,0);
             transform.localScale = new Vector2(5, 5);
             reparing = false;
+
+            DestroyImmediate(bouclier);
+            DestroyImmediate(moteur);
         }
 
+        timeElapsed += Time.deltaTime * 15;
         transform.position = new Vector2(transform.position.x, transform.position.y+shipOscilation.Evaluate(timeElapsed));
     }
 }

@@ -8,7 +8,8 @@ public class Ship : MonoBehaviour
     // render
     public AnimationCurve shipOscilation;
     public float timeElapsed;
-    public GameObject engineSpriteOn, shieldSpriteOn, milkSpriteOn, milkTooltip, shieldTooltip, engineTooltip;
+    public GameObject engineSpriteOn1, engineSpriteOn2, shieldSpriteOn, milkSpriteOn, milkTooltip, shieldTooltip, engineTooltip1, engineTooltip2;
+    public GameObject engineFlame1, engineFlame2;
     public MiniGame MiniGameUI;
     public LifeBar lifeRenderer;
     public Vector2 smallShip = new Vector2(2.5f, 2.5f);
@@ -22,9 +23,10 @@ public class Ship : MonoBehaviour
     public GameObject enginePrefab, shieldPrefab, milkPrefab, reparingSystem;
 
     // logic
-    public bool faultyEngine, faultyShield, faultyMilk, reparing;
+    public bool faultyEngine1 = false, faultyEngine2 = false, faultyShield, faultyMilk, reparing;
     public int shipLife = 8;
-    public float nextEngineFailure, nextShieldFailure, nextMilkFailure, breakShieldTimer, breakEngineTimer, breakMilkTimer;
+    public float reparingEngineNumber = 1, nextEngineFailure1, nextEngineFailure2, nextShieldFailure, nextMilkFailure, breakShieldTimer, breakEngineTimer1, breakEngineTimer2, breakMilkTimer;
+    public int dps = 20, dpsIncrease = 20, breakFrequency = 25, breakIncrease = 10;
 
     void Start()
     {
@@ -38,7 +40,8 @@ public class Ship : MonoBehaviour
 
         // setting up logic
         reparing = false;
-        repairEngine();
+        repairEngine1();
+        repairEngine2();
         repairShield();
         repairMilk();
         lifeRenderer.maxLifePoints = shipLife;
@@ -65,12 +68,26 @@ public class Ship : MonoBehaviour
             reparingSystem.GetComponent<Bouclier>().ship = this;
         }
 
-        // starting engine repair
-        else if (Input.GetKeyDown("e") && !reparing && faultyEngine)
+        // starting engine 1 repair
+        else if (Input.GetKeyDown("e") && !reparing && faultyEngine1)
         {
             transform.position = new Vector2(-50, 0);
             transform.localScale = smallShip;
             reparing = true;
+            reparingEngineNumber = 1;
+
+            MiniGameUI.ShowControlsMoteur();
+            reparingSystem = Instantiate(enginePrefab);
+            reparingSystem.GetComponent<Moteur>().ship = this;
+        }
+
+        // starting engine 2 repair
+        else if (Input.GetKeyDown("w") && !reparing && faultyEngine2)
+        {
+            transform.position = new Vector2(-50, 0);
+            transform.localScale = smallShip;
+            reparing = true;
+            reparingEngineNumber = 2;
 
             MiniGameUI.ShowControlsMoteur();
             reparingSystem = Instantiate(enginePrefab);
@@ -78,7 +95,7 @@ public class Ship : MonoBehaviour
         }
 
         // starting milk repair
-        else if (Input.GetKeyDown("m") && !reparing && faultyEngine)
+        else if (Input.GetKeyDown("m") && !reparing && faultyMilk)
         {
             transform.position = new Vector2(-50, 0);
             transform.localScale = smallShip;
@@ -86,11 +103,12 @@ public class Ship : MonoBehaviour
 
             MiniGameUI.ShowControlsMoteur();
             reparingSystem = Instantiate(milkPrefab);
-            //reparingSystem.GetComponent<Moteur>().ship = this;
+            reparingSystem.GetComponent<Moteur>().ship = this;
         }
 
         // applying ship shaking
         timeElapsed += Time.deltaTime;
+
         transform.position = new Vector2(transform.position.x, transform.position.y + shipOscilation.Evaluate(timeElapsed * 15));
 
         //Camera Shaking
@@ -104,17 +122,29 @@ public class Ship : MonoBehaviour
     private void checkFailure()
     {
         // check for engine failure timer
-        if (timeElapsed > nextEngineFailure)
+        if (timeElapsed > nextEngineFailure1)
         {
-            breakEngineTimer = 0;
-            faultyEngine = true;
-            engineSpriteOn.SetActive(false);
-            engineTooltip.SetActive(true);
-            nextEngineFailure = int.MaxValue;
+            breakEngineTimer1 = 0;
+            faultyEngine1 = true;
+            engineFlame1.SetActive(false);
+            engineSpriteOn1.SetActive(false);
+            engineTooltip1.SetActive(true);
+            nextEngineFailure1 = int.MaxValue;
+        }
+
+        // check for engine failure timer
+        if (timeElapsed > nextEngineFailure2)
+        {
+            breakEngineTimer2 = 0;
+            faultyEngine2 = true;
+            engineFlame2.SetActive(false);
+            engineSpriteOn2.SetActive(false);
+            engineTooltip2.SetActive(true);
+            nextEngineFailure2 = int.MaxValue;
         }
 
         // check for shield failure timer
-        if (nextShieldFailure < timeElapsed)
+        if (timeElapsed > nextShieldFailure)
         {
             breakShieldTimer = 0;
             faultyShield = true;
@@ -124,7 +154,7 @@ public class Ship : MonoBehaviour
         }
 
         // check for shield failure timer
-        if (nextMilkFailure < timeElapsed)
+        if (timeElapsed > nextMilkFailure)
         {
             breakMilkTimer = 0;
             faultyMilk = true;
@@ -136,36 +166,49 @@ public class Ship : MonoBehaviour
 
     private void checkDamage()
     {
+        var TimerBeforeDamage = dps - (timeElapsed/dpsIncrease);
+        if (TimerBeforeDamage < 5) TimerBeforeDamage = 5;
         if (faultyShield)
         {
             if (breakShieldTimer * 5 % 2 > 1) shieldSpriteOn.SetActive(false);
             else shieldSpriteOn.SetActive(true);
-            if (breakShieldTimer > 5)
+            if (breakShieldTimer > TimerBeforeDamage)
             {
                 breakShieldTimer = 0;
                 takeDamage();
             }
             else breakShieldTimer += Time.deltaTime;
         }
-        if (faultyEngine)
+        if (faultyEngine1)
         {
-            if (breakEngineTimer * 5 % 2 > 1) engineSpriteOn.SetActive(false);
-            else engineSpriteOn.SetActive(true);
-            if (breakEngineTimer > 5)
+            if (breakEngineTimer1 * 5 % 2 > 1) engineSpriteOn1.SetActive(false);
+            else engineSpriteOn1.SetActive(true);
+            if (breakEngineTimer1 > TimerBeforeDamage)
             {
-                breakEngineTimer = 0;
+                breakEngineTimer1 = 0;
                 takeDamage();
             }
-            else breakEngineTimer += Time.deltaTime;
+            else breakEngineTimer1 += Time.deltaTime;
+        }
+        if (faultyEngine2)
+        {
+            if (breakEngineTimer2 * 5 % 2 > 1) engineSpriteOn2.SetActive(false);
+            else engineSpriteOn2.SetActive(true);
+            if (breakEngineTimer2 > TimerBeforeDamage)
+            {
+                breakEngineTimer2 = 0;
+                takeDamage();
+            }
+            else breakEngineTimer2 += Time.deltaTime;
         }
         if (faultyMilk)
         {
             if (breakMilkTimer * 5 % 2 > 1) milkSpriteOn.SetActive(false);
             else milkSpriteOn.SetActive(true);
-            if (breakMilkTimer > 5)
+            if (breakMilkTimer > TimerBeforeDamage)
             {
                 breakMilkTimer = 0;
-                takeDamage();
+                //takeDamage();
             }
             else breakMilkTimer += Time.deltaTime;
         }
@@ -173,18 +216,53 @@ public class Ship : MonoBehaviour
 
     private float nextFailure()
     {
-        return timeElapsed + 5 + (Random.value * 4);
+        var nextFailureTiming = Random.value * (breakFrequency - (timeElapsed / breakIncrease));
+        if (nextFailureTiming < 5) nextFailureTiming = 5;
+        return timeElapsed + nextFailureTiming;
     }
 
     public void repairEngine()
     {
-        faultyEngine = false;
-        breakEngineTimer = 0;
-        engineSpriteOn.SetActive(true);
-        engineTooltip.SetActive(false);
-        nextEngineFailure = nextFailure();
+        if (reparingEngineNumber == 1)
+        {
+            faultyEngine1 = false;
+            breakEngineTimer1 = 0;
+            engineSpriteOn1.SetActive(true);
+            engineTooltip1.SetActive(false);
+            engineFlame1.SetActive(true);
+            nextEngineFailure1 = nextFailure();
+        } else if (reparingEngineNumber == 2)
+        {
+            faultyEngine2 = false;
+            breakEngineTimer2 = 0;
+            engineSpriteOn2.SetActive(true);
+            engineTooltip2.SetActive(false);
+            engineFlame2.SetActive(true);
+            nextEngineFailure2 = nextFailure();
+        }
         exitMiniGame();
     }
+
+    public void repairEngine1()
+    {
+        faultyEngine1 = false;
+        breakEngineTimer1 = 0;
+        engineSpriteOn1.SetActive(true);
+        engineTooltip1.SetActive(false);
+        nextEngineFailure1 = nextFailure();
+        exitMiniGame();
+    }
+
+    public void repairEngine2()
+    {
+        faultyEngine2 = false;
+        breakEngineTimer2 = 0;
+        engineSpriteOn2.SetActive(true);
+        engineTooltip2.SetActive(false);
+        nextEngineFailure2 = nextFailure();
+        exitMiniGame();
+    }
+
     public void repairShield()
     {
         faultyShield = false;

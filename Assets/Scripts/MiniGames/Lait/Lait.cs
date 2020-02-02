@@ -42,7 +42,7 @@ public class Lait : Game
     // Start is called before the first frame update
     void Start()
     {
-        vider = true;//Random.value > 0.5f ? true : false;
+        vider = Random.value > 0.5f ? true : false;
         bleu = Random.value > 0.5f ? true : false;
 
         gauge = bleu ? gaugeBleu : gaugeVert;
@@ -57,6 +57,9 @@ public class Lait : Game
 
         levier.SetActive(true);
         if (vider) SetY(gauge, remplirGaugeYMax);
+
+
+        SetConsignes($"<color=#d917d8><b>{(vider ? "Empty" : "Fill")}</b></color> the <color=#d917d8><b>{(bleu ? "Blue" : "Green")}</b></color> tank");
     }
 
     // Update is called once per frame

@@ -1175,6 +1175,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6850324223817415348, guid: 3c64310d419a24313805c0e53f7bc8a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 543
+      objectReference: {fileID: 0}
     - target: {fileID: 8446779376749825098, guid: 3c64310d419a24313805c0e53f7bc8a9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1230,11 +1235,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8446779376843356533, guid: 3c64310d419a24313805c0e53f7bc8a9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -170.70001
+      objectReference: {fileID: 0}
     - target: {fileID: 8446779377039628818, guid: 3c64310d419a24313805c0e53f7bc8a9,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8446779377039628821, guid: 3c64310d419a24313805c0e53f7bc8a9,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 118202359}
     - target: {fileID: 8446779377039628822, guid: 3c64310d419a24313805c0e53f7bc8a9,
         type: 3}
       propertyPath: m_IsActive

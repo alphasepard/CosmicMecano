@@ -101,7 +101,7 @@ public class Ship : MonoBehaviour
             transform.localScale = smallShip;
             reparing = true;
 
-            MiniGameUI.ShowControlsMoteur();
+            MiniGameUI.ShowControlsLait();
             reparingSystem = Instantiate(milkPrefab);
             reparingSystem.GetComponent<Lait>().ship = this;
         }

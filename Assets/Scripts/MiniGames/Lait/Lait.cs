@@ -24,13 +24,13 @@ public class Lait : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        viderOuRemplir = Random.value > 0.5f ? true : false;
+        vider = Random.value > 0.5f ? true : false;
         bleu = Random.value > 0.5f ? true : false;
 
         if (vider)
         {
             boutonBas.SetActive(true);
-            if (vert)
+            if (bleu)
             {
                 // gauge vert remplie
                 // gauge bleu vide
@@ -44,7 +44,7 @@ public class Lait : MonoBehaviour
         {
             boutonHaut.SetActive(true);
             boutonBas.SetActive(true);
-            if (vert)
+            if (bleu)
             {
                 // gauge vert vide
                 // gauge bleu remplie

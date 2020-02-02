@@ -47,7 +47,7 @@ public class Bouclier : Game
         pile = piles[selectedPile].gameObject;
         capot = bloc.GetComponentInChildren<Capot>().gameObject;
 
-        SetConsignes($"Change <color=#d917d8><b>{pileNames[selectedPile]}</b></color> battery of <color=#d917d8><b>{blocNames[selectedBloc]}</b></color> panel.");
+        SetConsignes($"Open <color=#d917d8><b>{blocNames[selectedBloc]} panel</b></color>, <color=#d917d8><b>Extract</b></color> the empty battery, Replace it with a <color=#d917d8><b>{pileNames[selectedPile]} battery</b></color> and <color=#d917d8><b>Close</b></color> the panel.");
 
         blocKey = blocKeys[selectedBloc];
         pileKey = pileKeys[selectedPile];
@@ -65,7 +65,7 @@ public class Bouclier : Game
     void Update()
     {
         if (Input.GetKeyDown(keyCodes[state])) Next();
-        else if (Input.anyKeyDown) End();
+        else if (state == State.PileTaken && Input.anyKeyDown) End();
     }
 
     void Next()
@@ -91,8 +91,6 @@ public class Bouclier : Game
                 Play(close);
                 capot.SetActive(true);
                 state = State.CapotClosed;
-                break;
-            case State.CapotClosed:
                 End();
                 break;
         }
@@ -100,7 +98,15 @@ public class Bouclier : Game
 
     void End()
     {
-        if (state == State.CapotClosed) ship.repairShield();
+        StartCoroutine(EndRoutine());
+    }
+
+    IEnumerator EndRoutine()
+    {
+        if(state == State.CapotClosed) {
+            yield return new WaitForSeconds(0.2f);
+            ship.repairShield();
+        }
         else ship.errorDamageShip();
 
         Destroy(gameObject);

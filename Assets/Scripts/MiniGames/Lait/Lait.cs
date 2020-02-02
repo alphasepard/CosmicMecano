@@ -63,7 +63,7 @@ public class Lait : Game
         levier.SetActive(true);
         if (vider) SetY(gauge, remplirGaugeYMax);
 
-        SetConsignes($"<color=#d917d8><b>{(vider ? "Empty" : "Fill")}</b></color> the <color=#d917d8><b>{(bleu ? "Blue" : "Green")}</b></color> tank");
+        SetConsignes($"Choose the <color=#d917d8><b>{(bleu ? "Blue" : "Green")}</b></color> tank and <color=#d917d8><b>{(vider ? "Empty" : "Fill")}</b></color> it until the last scale. Hit <color=#d917d8><b>Enter</b></color> when done.");
     }
 
     // Update is called once per frame

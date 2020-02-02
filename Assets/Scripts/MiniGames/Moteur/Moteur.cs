@@ -38,16 +38,14 @@ public class Moteur : Game
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return)) End();
-        else if (nbDirt == 0) return;
-        else if (Input.GetKeyDown(left ? KeyCode.RightArrow : KeyCode.LeftArrow))
+        if (Input.GetKeyDown(left ? KeyCode.RightArrow : KeyCode.LeftArrow))
         {
             left = !left;
             DeleteOneDirt();
             Play();
             var position = brosse.transform.localPosition;
             brosse.transform.localPosition = new Vector3(-1 * position.x, position.y, position.z);
-            if (nbDirt == 0) Destroy(brosse);
+            if (nbDirt == 0) End();
         }
     }
 

@@ -33,6 +33,15 @@ public class Bouclier : Game
     static string[] pileNames = new string[] { "small", "medium", "large" };
     static string[] blocNames = new string[] { "left", "right" };
 
+    static Dictionary<KeyCode, KeyCode> keyCodeAliases = new Dictionary<KeyCode, KeyCode>
+    {
+        { KeyCode.Alpha1, KeyCode.Keypad1},
+        { KeyCode.Alpha2, KeyCode.Keypad2},
+        { KeyCode.Alpha3, KeyCode.Keypad3},
+        { KeyCode.Alpha4, KeyCode.Keypad4},
+        { KeyCode.Alpha5, KeyCode.Keypad5},
+    };
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +73,9 @@ public class Bouclier : Game
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(keyCodes[state])) Next();
+        var keyCode = keyCodes[state];
+        var keyCodeAlias = keyCodeAliases[keyCode];
+        if (Input.GetKeyDown(keyCode) || Input.GetKeyDown(keyCodeAlias)) Next();
         else if (state == State.PileTaken && Input.anyKeyDown) End();
     }
 

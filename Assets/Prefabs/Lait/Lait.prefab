@@ -999,6 +999,8 @@ MonoBehaviour:
   ledVert: {fileID: 4185039558675389041}
   gaugeVert: {fileID: 7497572872355190046}
   gaugeBleu: {fileID: 9095137236256512074}
+  clipBouton: {fileID: 8300000, guid: ab0631eba75114a7faa7ec74585a2d10, type: 3}
+  clipLevier: {fileID: 8300000, guid: e79d505f0cce9458c92629be17330481, type: 3}
   vider: 0
   bleu: 0
   remplirGaugeYMax: 6.98

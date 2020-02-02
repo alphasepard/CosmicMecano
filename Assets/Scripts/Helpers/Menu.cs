@@ -3,6 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+
+    public void Update()
+    {
+        if (Input.GetKeyDown("r")) StartGame();
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene("Gameplay");

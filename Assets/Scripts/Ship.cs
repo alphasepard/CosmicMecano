@@ -103,7 +103,7 @@ public class Ship : MonoBehaviour
 
             MiniGameUI.ShowControlsMoteur();
             reparingSystem = Instantiate(milkPrefab);
-            reparingSystem.GetComponent<Moteur>().ship = this;
+            reparingSystem.GetComponent<Lait>().ship = this;
         }
 
         // applying ship shaking
@@ -208,7 +208,7 @@ public class Ship : MonoBehaviour
             if (breakMilkTimer > TimerBeforeDamage)
             {
                 breakMilkTimer = 0;
-                //takeDamage();
+                takeDamage();
             }
             else breakMilkTimer += Time.deltaTime;
         }
@@ -274,6 +274,7 @@ public class Ship : MonoBehaviour
     }
 
     public void repairMilk() {
+        Debug.Log("repair milk");
         faultyMilk = false;
         breakMilkTimer = 0;
         milkSpriteOn.SetActive(true);

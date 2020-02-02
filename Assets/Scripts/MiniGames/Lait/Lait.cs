@@ -53,8 +53,8 @@ public class Lait : Game
         gauge = bleu ? gaugeBleu : gaugeVert;
         bouton = bleu ? boutonBleu : boutonVert;
         led = bleu ? ledBleu : ledVert;
-        maxY = vider ? viderGaugeYMax : remplirGaugeYMax;
-        minY = vider ? viderGaugeYMin : remplirGaugeYMin;
+        maxY = vider ? viderGaugeYMax : remplirGaugeYMax + 1;
+        minY = vider ? viderGaugeYMin - 1 : remplirGaugeYMin;
         var levier = vider ? boutonHaut : boutonBas;
 
         buttonKey = bleu ? KeyCode.B : KeyCode.G;
@@ -94,9 +94,10 @@ public class Lait : Game
 
                 var y = gauge.transform.localPosition.y;
 
+                Debug.Log($"{minY}, {maxY}, {y}");
                 if (y < maxY && y > minY && Input.GetKeyDown(KeyCode.Return))
                 {
-                    if(ship) ship.repairMilk();
+                    if (ship) ship.repairMilk();
                     Destroy(gameObject);
                     Debug.Log("ok");
                     return;
@@ -116,7 +117,7 @@ public class Lait : Game
     {
         var step = speed * deltaY * (vider ? -1 : 1);
         var y = gauge.transform.localPosition.y + step;
-        SetY(gauge, Mathf.Clamp(y, viderGaugeYMin - 1, remplirGaugeYMax + 1));
+        SetY(gauge, Mathf.Clamp(y, viderGaugeYMin, remplirGaugeYMax));
     }
 
     void SwitchLevier()

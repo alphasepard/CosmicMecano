@@ -22,6 +22,7 @@ public class WinTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!score) return;
         timeSpent += TimeSpan.FromSeconds(Time.deltaTime);
         text.text = string.Format("{0:mm}’{0:ss}'’{0:ff}", timeSpent);
         score.score = timeSpent;

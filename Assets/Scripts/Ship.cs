@@ -76,15 +76,6 @@ public class Ship : MonoBehaviour
             reparingSystem.GetComponent<Moteur>().ship = this;
         }
 
-        // leaving repair menu
-        else if (Input.GetKeyDown(KeyCode.Return) && reparing)
-        {
-            transform.position = new Vector2(-28, 0);
-            transform.localScale = bigShip;
-            reparing = false;
-            MiniGameUI.HideControls();
-        }
-
         // applying ship shaking
         timeElapsed += Time.deltaTime;
         transform.position = new Vector2(transform.position.x, transform.position.y + shipOscilation.Evaluate(timeElapsed * 15));
@@ -126,6 +117,8 @@ public class Ship : MonoBehaviour
     {
         if (faultyShield)
         {
+            if (breakShieldTimer * 5 % 2 > 1) shieldSpriteOn.SetActive(false);
+            else shieldSpriteOn.SetActive(true);
             if (breakShieldTimer > 5)
             {
                 breakShieldTimer = 0;
@@ -135,6 +128,8 @@ public class Ship : MonoBehaviour
         }
         if (faultyEngine)
         {
+            if (breakEngineTimer * 5 % 2 > 1) engineSpriteOn.SetActive(false);
+            else engineSpriteOn.SetActive(true);
             if (breakEngineTimer > 5)
             {
                 breakEngineTimer = 0;

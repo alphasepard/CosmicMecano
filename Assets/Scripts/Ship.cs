@@ -46,6 +46,8 @@ public class Ship : MonoBehaviour
         checkDamage();
         checkLife();
 
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Menu");
+
         // starting shield repair
         if (Input.GetKeyDown("s") && !reparing && faultyShield)
         {

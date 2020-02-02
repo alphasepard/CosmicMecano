@@ -49,11 +49,11 @@ public class MiniGame : MonoBehaviour
 
     private void EnableControl(GameObject control)
     {
-        controls.SetActive(true);
         controlsMoteur.SetActive(false);
         controlsBouclier.SetActive(false);
         controlsLait.SetActive(false);
 
         control.SetActive(true);
+        ShowControls();
     }
 }

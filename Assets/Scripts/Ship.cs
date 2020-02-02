@@ -24,9 +24,8 @@ public class Ship : MonoBehaviour
 
     // logic
     public bool faultyEngine1 = false, faultyEngine2 = false, faultyShield, faultyMilk, reparing;
-    public int shipLife = 8;
     public float reparingEngineNumber = 1, nextEngineFailure1, nextEngineFailure2, nextShieldFailure, nextMilkFailure, breakShieldTimer, breakEngineTimer1, breakEngineTimer2, breakMilkTimer;
-    public int dps = 20, dpsIncrease = 20, breakFrequency = 25, breakIncrease = 10;
+    public int shipLife = 8, dps = 30, dpsIncrease = 20, breakFrequency = 25, breakIncrease = 10;
 
     void Start()
     {

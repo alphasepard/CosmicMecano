@@ -7,7 +7,7 @@ using TMPro;
 public class MiniGame : MonoBehaviour
 {
     public GameObject consign;
-    public GameObject controls, controlsMoteur, controlsBouclier;
+    public GameObject controls, controlsMoteur, controlsBouclier, controlsLait;
     private TextMeshProUGUI consignText;
     // Start is called before the first frame update
     void Start()
@@ -23,16 +23,17 @@ public class MiniGame : MonoBehaviour
 
     public void ShowControlsMoteur()
     {
-        controlsBouclier.SetActive(false);
-        controlsMoteur.SetActive(true);
-        ShowControls();
+        EnableControl(controlsMoteur);
     }
 
     public void ShowControlsBouclier()
     {
-        controlsMoteur.SetActive(false);
-        controlsBouclier.SetActive(true);
-        ShowControls();
+        EnableControl(controlsBouclier);
+    }
+
+    public void ShowControlsLait()
+    {
+        EnableControl(controlsLait);
     }
 
     public void HideControls()
@@ -44,5 +45,14 @@ public class MiniGame : MonoBehaviour
     public void SetConsign(string text)
     {
         if(consignText) consignText.text = text;
+    }
+
+    private void EnableControl(GameObject control)
+    {
+        controlsMoteur.SetActive(false);
+        controlsBouclier.SetActive(false);
+        controlsLait.SetActive(false);
+
+        control.SetActive(true);
     }
 }

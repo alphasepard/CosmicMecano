@@ -104,13 +104,6 @@ public class Lait : Game
                 break;
 
         }
-
-        if (Input.anyKeyDown)
-        {
-            if (ship) ship.errorDamageShip();
-            Destroy(gameObject);
-            Debug.Log("pas ok");
-        };
     }
 
 

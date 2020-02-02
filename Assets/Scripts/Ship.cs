@@ -85,9 +85,7 @@ public class Ship : MonoBehaviour
         {
             gameCamera.transform.localPosition = Random.insideUnitCircle * shakeAmount;
             shake -= Time.deltaTime * decreaseFactor;
-
         }
-
     }
 
     private void checkFailure()
@@ -184,7 +182,6 @@ public class Ship : MonoBehaviour
 
     public void takeDamage()
     {
-
         shake = 0.5f;
         lifeRenderer.RemoveLifePoint();
         shipLife--;

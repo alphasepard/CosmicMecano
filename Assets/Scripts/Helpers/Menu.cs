@@ -33,4 +33,19 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void SettingGame()
+    {
+        SceneManager.LoadScene("Setting");
+    }
+
+    public void Vaisseaux()
+    {
+        SceneManager.LoadScene("Vaisseaux");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

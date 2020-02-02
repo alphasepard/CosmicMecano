@@ -8,7 +8,7 @@ public class Ship : MonoBehaviour
     // render
     public AnimationCurve shipOscilation;
     public float timeElapsed;
-    public GameObject engineSpriteOn, shieldSpriteOn, shieldTooltip, engineTooltip;
+    public GameObject engineSpriteOn, shieldSpriteOn, milkSpriteOn, milkTooltip, shieldTooltip, engineTooltip;
     public MiniGame MiniGameUI;
     public LifeBar lifeRenderer;
     public Vector2 smallShip = new Vector2(2.5f, 2.5f);
@@ -19,12 +19,12 @@ public class Ship : MonoBehaviour
     public float shake, decreaseFactor, shakeAmount;
 
     // Game object
-    public GameObject enginePrefab, shieldPrefab, reparingSystem;
+    public GameObject enginePrefab, shieldPrefab, milkPrefab, reparingSystem;
 
     // logic
-    public bool faultyEngine, faultyShield, reparing;
+    public bool faultyEngine, faultyShield, faultyMilk, reparing;
     public int shipLife = 8;
-    public float nextEngineFailure, nextShieldFailure, breakShieldTimer, breakEngineTimer;
+    public float nextEngineFailure, nextShieldFailure, nextMilkFailure, breakShieldTimer, breakEngineTimer, breakMilkTimer;
 
     void Start()
     {
@@ -40,6 +40,7 @@ public class Ship : MonoBehaviour
         reparing = false;
         repairEngine();
         repairShield();
+        repairMilk();
         lifeRenderer.maxLifePoints = shipLife;
         lifeRenderer.Init();
     }
@@ -76,6 +77,18 @@ public class Ship : MonoBehaviour
             reparingSystem.GetComponent<Moteur>().ship = this;
         }
 
+        // starting milk repair
+        else if (Input.GetKeyDown("m") && !reparing && faultyEngine)
+        {
+            transform.position = new Vector2(-50, 0);
+            transform.localScale = smallShip;
+            reparing = true;
+
+            MiniGameUI.ShowControlsMoteur();
+            reparingSystem = Instantiate(milkPrefab);
+            //reparingSystem.GetComponent<Moteur>().ship = this;
+        }
+
         // applying ship shaking
         timeElapsed += Time.deltaTime;
         transform.position = new Vector2(transform.position.x, transform.position.y + shipOscilation.Evaluate(timeElapsed * 15));
@@ -109,6 +122,16 @@ public class Ship : MonoBehaviour
             shieldTooltip.SetActive(true);
             nextShieldFailure = int.MaxValue;
         }
+
+        // check for shield failure timer
+        if (nextMilkFailure < timeElapsed)
+        {
+            breakMilkTimer = 0;
+            faultyMilk = true;
+            milkSpriteOn.SetActive(false);
+            milkTooltip.SetActive(true);
+            nextMilkFailure = int.MaxValue;
+        }
     }
 
     private void checkDamage()
@@ -135,6 +158,17 @@ public class Ship : MonoBehaviour
             }
             else breakEngineTimer += Time.deltaTime;
         }
+        if (faultyMilk)
+        {
+            if (breakMilkTimer * 5 % 2 > 1) milkSpriteOn.SetActive(false);
+            else milkSpriteOn.SetActive(true);
+            if (breakMilkTimer > 5)
+            {
+                breakMilkTimer = 0;
+                takeDamage();
+            }
+            else breakMilkTimer += Time.deltaTime;
+        }
     }
 
     private float nextFailure()
@@ -158,6 +192,15 @@ public class Ship : MonoBehaviour
         shieldSpriteOn.SetActive(true);
         shieldTooltip.SetActive(false);
         nextShieldFailure = nextFailure();
+        exitMiniGame();
+    }
+
+    public void repairMilk() {
+        faultyMilk = false;
+        breakMilkTimer = 0;
+        milkSpriteOn.SetActive(true);
+        milkTooltip.SetActive(false);
+        nextMilkFailure = nextFailure();
         exitMiniGame();
     }
 

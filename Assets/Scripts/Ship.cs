@@ -14,6 +14,10 @@ public class Ship : MonoBehaviour
     public Vector2 smallShip = new Vector2(2.5f, 2.5f);
     public Vector2 bigShip = new Vector2(5, 5);
 
+    // camera shaking
+    public Camera gameCamera;
+    public float shake, decreaseFactor, shakeAmount;
+
     // Game object
     public GameObject enginePrefab, shieldPrefab, reparingSystem;
 
@@ -39,7 +43,7 @@ public class Ship : MonoBehaviour
         lifeRenderer.maxLifePoints = shipLife;
         lifeRenderer.Init();
     }
-   
+
     void Update()
     {
         checkFailure();
@@ -51,7 +55,7 @@ public class Ship : MonoBehaviour
         // starting shield repair
         if (Input.GetKeyDown("s") && !reparing && faultyShield)
         {
-            transform.position = new Vector2(-50,0);
+            transform.position = new Vector2(-50, 0);
             transform.localScale = smallShip;
             reparing = true;
 
@@ -63,19 +67,19 @@ public class Ship : MonoBehaviour
         // starting engine repair
         else if (Input.GetKeyDown("e") && !reparing && faultyEngine)
         {
-            transform.position = new Vector2(-50,0);
+            transform.position = new Vector2(-50, 0);
             transform.localScale = smallShip;
             reparing = true;
 
             MiniGameUI.ShowControlsMoteur();
             reparingSystem = Instantiate(enginePrefab);
             reparingSystem.GetComponent<Moteur>().ship = this;
-        } 
+        }
 
         // leaving repair menu
         else if (Input.GetKeyDown(KeyCode.Return) && reparing)
-        {   
-            transform.position = new Vector2(-28,0);
+        {
+            transform.position = new Vector2(-28, 0);
             transform.localScale = bigShip;
             reparing = false;
             MiniGameUI.HideControls();
@@ -83,7 +87,16 @@ public class Ship : MonoBehaviour
 
         // applying ship shaking
         timeElapsed += Time.deltaTime;
-        transform.position = new Vector2(transform.position.x, transform.position.y+shipOscilation.Evaluate(timeElapsed*15));
+        transform.position = new Vector2(transform.position.x, transform.position.y + shipOscilation.Evaluate(timeElapsed * 15));
+
+        //Camera Shaking
+        if (shake > 0)
+        {
+            gameCamera.transform.localPosition = Random.insideUnitCircle * shakeAmount;
+            shake -= Time.deltaTime * decreaseFactor;
+
+        }
+
     }
 
     private void checkFailure()
@@ -116,8 +129,7 @@ public class Ship : MonoBehaviour
             if (breakShieldTimer > 5)
             {
                 breakShieldTimer = 0;
-                lifeRenderer.RemoveLifePoint();
-                shipLife--;
+                takeDamage();
             }
             else breakShieldTimer += Time.deltaTime;
         }
@@ -126,8 +138,7 @@ public class Ship : MonoBehaviour
             if (breakEngineTimer > 5)
             {
                 breakEngineTimer = 0;
-                lifeRenderer.RemoveLifePoint();
-                shipLife--;
+                takeDamage();
             }
             else breakEngineTimer += Time.deltaTime;
         }
@@ -160,8 +171,7 @@ public class Ship : MonoBehaviour
     public void errorDamageShip()
     {
         exitMiniGame();
-        lifeRenderer.RemoveLifePoint();
-        shipLife--;
+        takeDamage();
     }
 
     public void exitMiniGame()
@@ -175,5 +185,13 @@ public class Ship : MonoBehaviour
     public void checkLife()
     {
         if (shipLife < 1) SceneManager.LoadScene("GameOver");
+    }
+
+    public void takeDamage()
+    {
+
+        shake = 0.5f;
+        lifeRenderer.RemoveLifePoint();
+        shipLife--;
     }
 }

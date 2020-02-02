@@ -22,6 +22,8 @@ public class Lait : Game
     public GameObject gaugeVert;
     public GameObject gaugeBleu;
 
+    public AudioClip clipBouton, clipLevier;
+
     // logic
     public bool vider;
     public bool bleu;
@@ -36,12 +38,15 @@ public class Lait : Game
     private KeyCode buttonKey, levelKey;
     GameObject gauge, led, bouton;
     float maxY, minY;
+    AudioSource audioSource;
 
     public float speed = 0.01f;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         vider = Random.value > 0.5f ? true : false;
         bleu = Random.value > 0.5f ? true : false;
 
@@ -57,7 +62,6 @@ public class Lait : Game
 
         levier.SetActive(true);
         if (vider) SetY(gauge, remplirGaugeYMax);
-
 
         SetConsignes($"<color=#d917d8><b>{(vider ? "Empty" : "Fill")}</b></color> the <color=#d917d8><b>{(bleu ? "Blue" : "Green")}</b></color> tank");
     }
@@ -75,6 +79,7 @@ public class Lait : Game
                     state = State.ChangeLevel;
                     bouton.SetActive(true);
                     led.SetActive(true);
+                    PlaySound(clipBouton);
                     return;
                 }
                 break;
@@ -123,8 +128,17 @@ public class Lait : Game
 
     void SwitchLevier()
     {
+        PlaySound(clipBouton);
+        if (!ledValve.activeSelf) PlaySound(clipLevier);
+
         boutonBas.SetActive(!boutonBas.activeSelf);
         boutonHaut.SetActive(!boutonHaut.activeSelf);
         ledValve.SetActive(!ledValve.activeSelf);
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

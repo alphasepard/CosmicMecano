@@ -74,8 +74,8 @@ public class Bouclier : Game
     void Update()
     {
         var keyCode = keyCodes[state];
-        var keyCodeAlias = keyCodeAliases[keyCode];
-        if (Input.GetKeyDown(keyCode) || Input.GetKeyDown(keyCodeAlias)) Next();
+        if (Input.GetKeyDown(keyCode)) Next();
+        else if(keyCodeAliases.ContainsKey(keyCode) && Input.GetKeyDown(keyCodeAliases[keyCode])) Next();
         else if (state == State.PileTaken && Input.anyKeyDown) End();
     }
 

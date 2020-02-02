@@ -6,10 +6,16 @@ public class Moteur : Game
 {
     public bool left = true;
     public int nbDirt;
+    public AudioClip[] clips;
+
     GameObject brosse;
+    AudioSource audioSource;
+
+    static readonly System.Random rand = new System.Random();
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         nbDirt = transform.childCount;
         brosse = GetComponentInChildren<Brosse>().gameObject;
         SetConsignes("Clean up engine aeration.");
@@ -38,6 +44,7 @@ public class Moteur : Game
         {
             left = !left;
             DeleteOneDirt();
+            Play();
             var position = brosse.transform.localPosition;
             brosse.transform.localPosition = new Vector3(-1 * position.x, position.y, position.z);
             if (nbDirt == 0) Destroy(brosse);
@@ -49,5 +56,12 @@ public class Moteur : Game
         if(nbDirt == 0) ship.repairEngine();
         else ship.errorDamageShip();
         Destroy(gameObject);
+    }
+
+    void Play()
+    {
+        var i = rand.Next(0, clips.Length);
+        audioSource.clip = clips[i];
+        audioSource.Play();
     }
 }

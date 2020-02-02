@@ -17,8 +17,11 @@ public class Bouclier : Game
     public int selectedBloc, selectedPile;
     public State state;
 
+    public AudioClip open, close, extract, place;
+
     Dictionary<State, KeyCode> keyCodes;
     GameObject capot, pile;
+    AudioSource audioSource;
     readonly System.Random rand = new System.Random();
 
     static readonly KeyCode[] blocKeys = new KeyCode[] { KeyCode.A, KeyCode.B, KeyCode.C, KeyCode.D };
@@ -33,6 +36,8 @@ public class Bouclier : Game
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         var blocs = GetComponentsInChildren<Bloc>();
         selectedBloc = rand.Next(0, blocs.Length);
         var bloc = blocs[selectedBloc].gameObject;
@@ -68,18 +73,22 @@ public class Bouclier : Game
         switch (state)
         {
             case State.Initial:
+                Play(open);
                 capot.SetActive(false);
                 state = State.CapotOpen;
                 break;
             case State.CapotOpen:
+                Play(extract);
                 pile.SetActive(false);
                 state = State.PileTaken;
                 break;
             case State.PileTaken:
+                Play(place);
                 pile.SetActive(true);
                 state = State.PileReplaced;
                 break;
             case State.PileReplaced:
+                Play(close);
                 capot.SetActive(true);
                 state = State.CapotClosed;
                 break;
@@ -95,5 +104,11 @@ public class Bouclier : Game
         else ship.errorDamageShip();
 
         Destroy(gameObject);
+    }
+
+    void Play(AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

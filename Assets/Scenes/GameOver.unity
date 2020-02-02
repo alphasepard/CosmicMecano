@@ -785,7 +785,7 @@ PrefabInstance:
     - target: {fileID: 869920593260607346, guid: 7e4bb20fca7e8458e85bc3f3535b704c,
         type: 3}
       propertyPath: m_Text
-      value: Retour au menu
+      value: Return to menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4bb20fca7e8458e85bc3f3535b704c, type: 3}
@@ -926,6 +926,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 869920593260607346, guid: 7e4bb20fca7e8458e85bc3f3535b704c,
+        type: 3}
+      propertyPath: m_Text
+      value: Start a game
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4bb20fca7e8458e85bc3f3535b704c, type: 3}

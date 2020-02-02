@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class MiniGame : MonoBehaviour
 {
     public GameObject consign;
     public GameObject controls, controlsMoteur, controlsBouclier;
-    private Text consignText;
+    private TextMeshProUGUI consignText;
     // Start is called before the first frame update
     void Start()
     {
-        consignText = consign.GetComponentInChildren<Text>();
+        consignText = consign.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     private void ShowControls()

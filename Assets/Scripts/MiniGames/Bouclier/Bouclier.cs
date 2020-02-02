@@ -42,7 +42,7 @@ public class Bouclier : Game
         pile = piles[selectedPile].gameObject;
         capot = bloc.GetComponentInChildren<Capot>().gameObject;
 
-        SetConsignes($"Change {pileNames[selectedPile]} battery of {blocNames[selectedBloc]} panel.");
+        SetConsignes($"Change <color=#d917d8><b>{pileNames[selectedPile]}</b></color> battery of <color=#d917d8><b>{blocNames[selectedBloc]}</b></color> panel.");
 
         blocKey = blocKeys[selectedBloc];
         pileKey = pileKeys[selectedPile];

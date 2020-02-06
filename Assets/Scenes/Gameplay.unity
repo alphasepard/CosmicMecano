@@ -394,6 +394,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4587486723876547792, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: maxLifePoints
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4587486723876547792, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: firstLifePointPrefabLow
+      value: 
+      objectReference: {fileID: 3612134590819050088, guid: 9d9fe1d9ca23246da9c9fdb50fd83331,
+        type: 3}
+    - target: {fileID: 4587486723876547792, guid: 624d7380e302348cfbdd0a50941740a5,
+        type: 3}
+      propertyPath: firstLifePointPrefabCritical
+      value: 
+      objectReference: {fileID: 2488020837632218212, guid: df189eb20a4f1498cb2b7eeb6c8b4d73,
+        type: 3}
     - target: {fileID: 4587486723876547793, guid: 624d7380e302348cfbdd0a50941740a5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2328,7 +2345,6 @@ MonoBehaviour:
   faultyShield: 0
   faultyMilk: 0
   reparing: 0
-  shipLife: 8
   reparingEngineNumber: 1
   nextEngineFailure1: 0
   nextEngineFailure2: 0
@@ -2338,6 +2354,7 @@ MonoBehaviour:
   breakEngineTimer1: 0
   breakEngineTimer2: 0
   breakMilkTimer: 0
+  shipLife: 6
   dps: 15
   dpsIncrease: 10
   breakFrequency: 25

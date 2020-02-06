@@ -43,10 +43,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329a1d81a0b1f465183720016e825abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLifePointPrefab: {fileID: 7999837331647661823, guid: c19773f6f02414b348785b9ce553c75e,
+  lifePointPrefab: {fileID: 7999837331647661823, guid: c19773f6f02414b348785b9ce553c75e,
     type: 3}
-  middleLifePointPrefab: {fileID: 2548932909586393885, guid: eb812b4667ef84c71be2820dc79bf0f4,
+  firstLifePointSprite: {fileID: 21300000, guid: 1d3a67f00e4bd4a9dba1a5edba7d17f7,
     type: 3}
-  lastLifePointPrefab: {fileID: 7458204026172278256, guid: 626c4d61fc7ef495884af82e758c39b7,
+  middleLifePointSprite: {fileID: 21300000, guid: 6e07d524b6e9f4465aca95907dffe890,
+    type: 3}
+  lastLifePointSprite: {fileID: 21300000, guid: 8f9394afcb37e42a5b62af07b50027d7,
+    type: 3}
+  middleLifePointSpriteLow: {fileID: 21300000, guid: 5eeb37eb8181148e2ad55dc7db7ba3fe,
+    type: 3}
+  firstLifePointSpriteLow: {fileID: 21300000, guid: 23812d980d69641f88892f6f42d79346,
+    type: 3}
+  middleLifePointSpriteCritical: {fileID: 21300000, guid: aa66f00ae069e40a8af9d9c9ca88c933,
+    type: 3}
+  firstLifePointSpriteCritical: {fileID: 21300000, guid: 8430cf8b659414ddfb675357483ebd80,
     type: 3}
   maxLifePoints: 3

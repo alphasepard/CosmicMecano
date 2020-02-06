@@ -5,90 +5,76 @@ using UnityEngine;
 public class LifeBar : MonoBehaviour
 {
 
-    public GameObject firstLifePointPrefab, middleLifePointPrefab, lastLifePointPrefab, middleLifePointPrefabLow, firstLifePointPrefabLow, middleLifePointPrefabCritical, firstLifePointPrefabCritical;
+    public GameObject lifePointPrefab;
+    public Sprite firstLifePointSprite, middleLifePointSprite, lastLifePointSprite, middleLifePointSpriteLow, firstLifePointSpriteLow, middleLifePointSpriteCritical, firstLifePointSpriteCritical;
     public int maxLifePoints;
-    public int lifePoints;
-    private GameObject[] lifePointGameObjects;
-
-    private void Start()
-    {
-        
-    }
+    int lifePoints = 0;
 
     // Start is called before the first frame update
-    void Update()
+    void Start()
     {
-        lifePoints = maxLifePoints;
         Init();
+    }
+
+    private Sprite whichMiddleLifePointSprite()
+    {
+        if (lifePoints <= (maxLifePoints / 3))
+            return middleLifePointSpriteCritical;
+        else if (lifePoints <= (maxLifePoints / 3) * 2)
+            return middleLifePointSpriteLow;
+        else return middleLifePointSprite;
+    }
+
+    private Sprite whichFirstLifePointSprite()
+    {
+        if (lifePoints <= (maxLifePoints / 3))
+            return firstLifePointSpriteCritical;
+        else if (lifePoints <= (maxLifePoints / 3) * 2)
+            return firstLifePointSpriteLow;
+        else return firstLifePointSprite;
     }
 
     public void RemoveLifePoint()
     {
         if (lifePoints == 0) return;
         lifePoints--;
-        Destroy(lifePointGameObjects[lifePoints]);
-    }
 
-    private GameObject whichMiddleLifePointPrefab()
-    {
-        if (lifePoints < (maxLifePoints / 3))
-            return middleLifePointPrefabCritical;
-        else if (lifePoints < (maxLifePoints / 3) * 2)
-            return middleLifePointPrefabLow;
-        else return middleLifePointPrefab;
-    }
+        Destroy(transform.GetChild(lifePoints).gameObject);
 
-    private GameObject whichFirstLifePointPrefab()
-    {
-        if (lifePoints < (maxLifePoints / 3))
-            return firstLifePointPrefabCritical;
-        else if (lifePoints < (maxLifePoints / 3) * 2)
-            return firstLifePointPrefabLow;
-        else return firstLifePointPrefab;
-    }
-
-    private void lifeBar()
-    {
-        while(lifePoints < maxLifePoints) RemoveLifePoint();
-
-        Debug.Log("LIFE BAR");
-        var offset = 0f;
         for (var i = 0; i < lifePoints; i++)
         {
-            //RemoveLifePoint();
-            var prefab = whichMiddleLifePointPrefab();
-
-            var pas = 0.67f;
-            if (i == 0) prefab = whichFirstLifePointPrefab();
-            else if (i == 1) pas = 0.75f;
-            else if (i == lifePoints - 1) prefab = lastLifePointPrefab;
-
-            offset += pas;
-
-
-            if (lifePointGameObjects[i])
-            {
-                Destroy(lifePointGameObjects[i]);
-                Debug.Log("COUCOU");
-            }
-            lifePointGameObjects[i] = Instantiate(prefab, transform);
-            lifePointGameObjects[i].transform.localPosition = new Vector3(offset, 0, 0);
+            var sprite = i == 0 ? whichFirstLifePointSprite() : whichMiddleLifePointSprite();
+            transform.GetChild(i).GetComponent<SpriteRenderer>().sprite = sprite;
         }
+        
     }
 
     public void Init()
     {
-        //while (lifePoints > 0)
-        //{
-        //    Debug.Log("coucou 1");
-        //    RemoveLifePoint();
-        //}
+        while (lifePoints > 0) RemoveLifePoint();
 
-        Debug.Log("coucou 2");
-        //lifePoints = ;
-        lifePointGameObjects = new GameObject[lifePoints];
+        lifePoints = maxLifePoints;
 
-        lifeBar();
+        var offset = 0f;
+
+        for (var i = 0; i < lifePoints; i++)
+        {
+
+            var instance = Instantiate(lifePointPrefab, transform);
+
+            var sprite = middleLifePointSprite;
+
+            var pas = 0.67f;
+
+            if (i == 0) sprite = firstLifePointSprite;
+            else if (i == 1) pas = 0.75f;
+            else if (i == lifePoints - 1) sprite = lastLifePointSprite;
+
+            offset += pas;
+
+            instance.GetComponent<SpriteRenderer>().sprite = sprite;
+
+            instance.transform.localPosition = new Vector3(offset, 0, 0);
+        }
     }
 }
-

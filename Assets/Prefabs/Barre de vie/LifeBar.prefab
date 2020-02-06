@@ -49,4 +49,12 @@ MonoBehaviour:
     type: 3}
   lastLifePointPrefab: {fileID: 7458204026172278256, guid: 626c4d61fc7ef495884af82e758c39b7,
     type: 3}
+  middleLifePointPrefabLow: {fileID: 5250365826009773907, guid: 9abbec44cebf14549aa6b7cd241e9a7a,
+    type: 3}
+  lastLifePointPrefabLow: {fileID: 3612134590819050088, guid: 9d9fe1d9ca23246da9c9fdb50fd83331,
+    type: 3}
+  middleLifePointPrefabCritical: {fileID: 614312172247929832, guid: a89eb6ee0b17e440db53e2265478bec5,
+    type: 3}
+  lastLifePointPrefabCritical: {fileID: 2488020837632218212, guid: df189eb20a4f1498cb2b7eeb6c8b4d73,
+    type: 3}
   maxLifePoints: 3

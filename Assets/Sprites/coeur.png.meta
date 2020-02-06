@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 08974ffa165a945959e965762bac8815
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7980934933768138934
+    second: coeur_0
+  - first:
+      213: 7529560616647538531
+    second: coeur_1
+  - first:
+      213: -601215891047965949
+    second: coeur_2
+  - first:
+      213: -5983118147548355204
+    second: coeur_3
+  - first:
+      213: 1336750451228619453
+    second: coeur_4
+  - first:
+      213: 6424437696622219042
+    second: coeur_5
+  - first:
+      213: 8424398969886831166
+    second: coeur_6
+  - first:
+      213: -393029943688238533
+    second: coeur_7
+  - first:
+      213: 8809081192312792343
+    second: coeur_8
+  - first:
+      213: 6358492591754239205
+    second: coeur_9
+  - first:
+      213: 8914450595416764584
+    second: coeur_10
+  - first:
+      213: 6793938199672559105
+    second: coeur_11
+  - first:
+      213: 2634594245684597862
+    second: coeur_12
+  - first:
+      213: 7566260581212216320
+    second: coeur_13
+  - first:
+      213: -5046271976920767707
+    second: coeur_14
+  - first:
+      213: -5543074646593235643
+    second: coeur_15
+  - first:
+      213: 8634346536433597523
+    second: coeur_16
+  - first:
+      213: 3739415302549668045
+    second: coeur_17
+  - first:
+      213: 8898489355301577793
+    second: coeur_18
+  - first:
+      213: 2421683351020825880
+    second: coeur_19
+  - first:
+      213: 5441902506985972563
+    second: coeur_20
+  - first:
+      213: 7097940158792269742
+    second: coeur_21
+  - first:
+      213: 16989439886892004
+    second: coeur_22
+  - first:
+      213: 8604092138372371261
+    second: coeur_23
+  - first:
+      213: 6984765547683502726
+    second: coeur_24
+  - first:
+      213: 1094242106888755648
+    second: coeur_25
+  - first:
+      213: 6272998405924683197
+    second: coeur_26
+  - first:
+      213: -5513828417870069574
+    second: coeur_27
+  - first:
+      213: -2562839969419398532
+    second: coeur_28
+  - first:
+      213: -3583415438327044726
+    second: coeur_29
+  - first:
+      213: 5104670751149722878
+    second: coeur_30
+  - first:
+      213: -82406336293669707
+    second: coeur_31
+  - first:
+      213: -7655870991747839806
+    second: coeur_32
+  - first:
+      213: 8852449052775255038
+    second: coeur_33
+  - first:
+      213: -4058160999167090952
+    second: coeur_34
+  - first:
+      213: 8813152249988370360
+    second: coeur_35
+  - first:
+      213: 2100511241773689155
+    second: coeur_36
+  - first:
+      213: -498698805361042542
+    second: coeur_37
+  - first:
+      213: 1383322382033110984
+    second: coeur_38
+  - first:
+      213: -6372399011260536939
+    second: coeur_39
+  - first:
+      213: -6882349511982574272
+    second: coeur_40
+  - first:
+      213: -818301729187181445
+    second: coeur_41
+  - first:
+      213: 5921469618324906018
+    second: coeur_42
+  - first:
+      213: 4522153135095430828
+    second: coeur_43
+  - first:
+      213: 2569584051346901580
+    second: coeur_44
+  - first:
+      213: -3597396066458601952
+    second: coeur_45
+  - first:
+      213: -8919834781147105705
+    second: coeur_46
+  - first:
+      213: -1964062752580907350
+    second: coeur_47
+  - first:
+      213: -4152667736751802639
+    second: coeur_48
+  - first:
+      213: 192891374501917754
+    second: coeur_49
+  - first:
+      213: -1303971043032420025
+    second: coeur_50
+  - first:
+      213: -1033218422341924801
+    second: coeur_51
+  - first:
+      213: -782537870479770244
+    second: coeur_52
+  - first:
+      213: 3597550031162406520
+    second: coeur_53
+  - first:
+      213: -6454513381384199892
+    second: coeur_54
+  - first:
+      213: 4805918634595370349
+    second: coeur_55
+  - first:
+      213: 82626660968761278
+    second: coeur_56
+  - first:
+      213: 7776930440856760694
+    second: coeur_57
+  - first:
+      213: 6423011725161053564
+    second: coeur_58
+  - first:
+      213: -2040712342628115059
+    second: coeur_59
+  - first:
+      213: -1572902490264606510
+    second: coeur_60
+  - first:
+      213: 3669092074713432636
+    second: coeur_61
+  - first:
+      213: -647207585877189286
+    second: coeur_62
+  - first:
+      213: 6051897907983416085
+    second: coeur_63
+  - first:
+      213: 3643750810516236291
+    second: coeur_64
+  - first:
+      213: -8419676486630018988
+    second: coeur_65
+  - first:
+      213: 3412603414337753714
+    second: coeur_66
+  - first:
+      213: -696870323210763634
+    second: coeur_67
+  - first:
+      213: -4501474204244136102
+    second: coeur_68
+  - first:
+      213: -3957605190935719367
+    second: coeur_69
+  - first:
+      213: 6512655668589806221
+    second: coeur_70
+  - first:
+      213: 244780725667932569
+    second: coeur_71
+  - first:
+      213: -8910600898655412583
+    second: coeur_72
+  - first:
+      213: 8390617637166776213
+    second: coeur_73
+  - first:
+      213: 3116895772290750390
+    second: coeur_74
+  - first:
+      213: -902596569403784148
+    second: coeur_75
+  - first:
+      213: 7436543608734784278
+    second: coeur_76
+  - first:
+      213: -5476232832351688400
+    second: coeur_77
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: coeur_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 14.166667
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b071c6990af1ce60800000000000000
+      internalID: 7980934933768138934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coeur_1
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 14.166667
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3673c0ecc7f5e7860800000000000000
+      internalID: 7529560616647538531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coeur_2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 14.166667
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b14cc155d08a7f0800000000000000
+      internalID: -601215891047965949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coeur_3
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 14.166667
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75ef26aeb1b7fca0800000000000000
+      internalID: -5983118147548355204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coeur_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 14.166667
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db233d6f3771d8210800000000000000
+      internalID: 1336750451228619453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coeur_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 14.166667
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fcbc40c00382950800000000000000
+      internalID: 6424437696622219042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
